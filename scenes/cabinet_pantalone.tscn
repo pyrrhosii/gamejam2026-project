@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bylhk4b41b17d"]
+
+[ext_resource type="Texture2D" uid="uid://bgnh2oklp3flx" path="res://assets/cabinet.jpg" id="1_3gx4r"]
+[ext_resource type="Script" uid="uid://bnn4s2jqx8j27" path="res://scenes/buttonGlobe.gd" id="2_x50r7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6sfa"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="Cabinet-arlequina" type="Node2D" unique_id=942869782]
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=1468266225]
+follow_viewport_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="Background" unique_id=1264324946]
+z_index = -2
+anchors_preset = -1
+anchor_left = 0.0052083335
+anchor_top = -0.0030864198
+anchor_right = 1.0052084
+anchor_bottom = 0.99691355
+offset_left = -6.0
+offset_top = 2.0
+offset_right = -6.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3gx4r")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dialogueBoxTableau" type="CanvasLayer" parent="." unique_id=775718855]
+follow_viewport_enabled = true
+
+[node name="TextureButton" type="TextureButton" parent="dialogueBoxTableau" unique_id=1979717359]
+anchors_preset = -1
+anchor_left = 0.365
+anchor_right = 0.47000003
+anchor_bottom = 0.231
+offset_left = -0.480011
+offset_top = 48.0
+offset_right = 0.5599365
+offset_bottom = 0.31199646
+script = ExtResource("2_x50r7")
+
+[node name="Panel" type="Panel" parent="dialogueBoxTableau" unique_id=1602997527]
+offset_left = 596.0
+offset_top = 51.0
+offset_right = 855.0
+offset_bottom = 183.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c6sfa")
+
+[node name="container" type="MarginContainer" parent="dialogueBoxTableau/Panel" unique_id=1448657170]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0320001
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -94.0
+offset_right = -61.93602
+offset_bottom = -94.0
+
+[node name="Label" type="Label" parent="dialogueBoxTableau/Panel/container" unique_id=813671938]
+layout_mode = 2
+text = "Ceci est un Tableau de maître"
