@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var label = $Label  # Label enfant direct ✅
+@onready var label = $CanvasLayer/Label  # Label enfant direct ✅
 
 func _ready():
 	label.visible = false

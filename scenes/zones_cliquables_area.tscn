@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://fu6qp8884wc" path="res://assets/pays.jpg" id="1_knnb5"]
 [ext_resource type="Script" uid="uid://bdbjcm1eoipcy" path="res://scripts/archives/ordre_boutons_testCM.gd" id="2_bjss7"]
 [ext_resource type="Texture2D" uid="uid://cs1j4ife5tahf" path="res://assets/icon.svg" id="2_l0oga"]
-[ext_resource type="Script" uid="uid://cq2b2o183u5a3" path="res://scripts/archives/buttonGlobeZoomed_testCM.gd" id="3_l0oga"]
+[ext_resource type="Script" uid="uid://cq2b2o183u5a3" path="res://scripts/UI/buttonGlobeZoomed.gd" id="3_l0oga"]
 [ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="4_tx1b5"]
 [ext_resource type="Script" uid="uid://bnwcmrqyjfu0a" path="res://scripts/archives/area_2d.gd" id="5_l0oga"]
 
@@ -34,6 +34,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_bjss7")
 
 [node name="EmpireOmottan" type="CanvasLayer" parent="GroupePays" unique_id=889544775]
+visible = false
 follow_viewport_enabled = true
 
 [node name="BoutonOmottan" type="TextureButton" parent="GroupePays/EmpireOmottan" unique_id=889408401]
@@ -79,6 +80,7 @@ vertical_alignment = 3
 autowrap_mode = 2
 
 [node name="Chinapon" type="CanvasLayer" parent="GroupePays" unique_id=832325473]
+visible = false
 follow_viewport_enabled = true
 
 [node name="BoutonChinapon" type="TextureButton" parent="GroupePays/Chinapon" unique_id=1921339312]
@@ -124,6 +126,7 @@ vertical_alignment = 3
 autowrap_mode = 2
 
 [node name="Dindia" type="CanvasLayer" parent="GroupePays" unique_id=36098054]
+visible = false
 follow_viewport_enabled = true
 
 [node name="BoutonDindia" type="TextureButton" parent="GroupePays/Dindia" unique_id=900715461]
@@ -169,6 +172,7 @@ vertical_alignment = 3
 autowrap_mode = 2
 
 [node name="Sultanat" type="CanvasLayer" parent="GroupePays" unique_id=183082781]
+visible = false
 follow_viewport_enabled = true
 
 [node name="BoutonSultanat" type="TextureButton" parent="GroupePays/Sultanat" unique_id=235135567]
@@ -215,6 +219,7 @@ vertical_alignment = 3
 autowrap_mode = 2
 
 [node name="Capistan" type="CanvasLayer" parent="GroupePays" unique_id=569604350]
+visible = false
 follow_viewport_enabled = true
 
 [node name="BoutonCapistan" type="TextureButton" parent="GroupePays/Capistan" unique_id=1413229]
@@ -261,6 +266,7 @@ vertical_alignment = 3
 autowrap_mode = 2
 
 [node name="Europea" type="CanvasLayer" parent="GroupePays" unique_id=1597976301]
+visible = false
 follow_viewport_enabled = true
 
 [node name="BoutonEuropea" type="TextureButton" parent="GroupePays/Europea" unique_id=342895782]
@@ -319,24 +325,115 @@ text = "You did it !!
 
 [node name="GroupArea" type="CanvasGroup" parent="." unique_id=1608104507]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="GroupArea" unique_id=1353238664]
-
-[node name="Area2D" type="Area2D" parent="GroupArea/CanvasLayer" unique_id=812060138]
+[node name="AreaEuropea" type="Area2D" parent="GroupArea" unique_id=812060138]
 script = ExtResource("5_l0oga")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GroupArea/CanvasLayer/Area2D" unique_id=1410413063]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GroupArea/AreaEuropea" unique_id=1410413063]
 position = Vector2(784.827, 668.649)
 polygon = PackedVector2Array(-252.82703, -126.64899, -181.82703, -140.64899, -142.82703, -149.64899, -96.82703, -132.64899, -63.827026, -128.64899, -33.827026, -162.64899, -10.827026, -197.64899, 0.17297363, -164.64899, -5.8270264, -125.64899, -17.827026, -97.64899, -9.827026, -65.64899, -0.82702637, -14.648987, 18.172974, 11.351013, 52.172974, 20.351013, 110.17297, 24.351013, 152.17297, 33.351013, 204.17297, 59.351013, 233.17297, 87.35101, 277.17297, 114.35101, 355.17297, 147.35101, 365.17297, 156.35101, 304.17297, 161.35101, 226.17297, 183.35101, 176.17297, 215.35101, 138.17297, 248.35101, 92.17297, 284.351, 12.172974, 302.351, -87.82703, 293.351, -156.82703, 284.351, -207.82703, 263.351, -239.82703, 223.35101, -248.82703, 188.35101, -245.82703, 139.35101, -237.82703, 90.35101, -227.82703, 30.351013, -232.82703, -29.648987, -247.82703, -81.64899, -250.82703, -125.64899)
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="GroupArea/CanvasLayer/Area2D" unique_id=585060735]
+[node name="CanvasLayer" type="CanvasLayer" parent="GroupArea/AreaEuropea" unique_id=1353238664]
+
+[node name="Label" type="Label" parent="GroupArea/AreaEuropea/CanvasLayer" unique_id=585060735]
 top_level = true
 z_index = 1
 offset_left = 589.0
 offset_top = 773.0
-offset_right = 832.0
+offset_right = 853.0
 offset_bottom = 796.0
 text = "Europea, cette ville merveilleuse !!"
+metadata/_edit_use_anchors_ = true
+
+[node name="AreaDindia" type="Area2D" parent="GroupArea" unique_id=1805316320]
+script = ExtResource("5_l0oga")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GroupArea/AreaDindia" unique_id=1855375524]
+polygon = PackedVector2Array(819, 674, 840, 611, 878, 586, 940, 567, 1011, 545, 1034, 513, 1041, 494, 1099, 500, 1161, 519, 1237, 543, 1298, 553, 1344, 531, 1365, 521, 1387, 546, 1361, 567, 1370, 589, 1382, 618, 1407, 625, 1446, 619, 1467, 609, 1480, 640, 1497, 680, 1493, 712, 1457, 732, 1403, 751, 1360, 769, 1333, 796, 1300, 799, 1228, 787, 1173, 768, 1141, 756, 1043, 733, 989, 708, 950, 694, 921, 682, 891, 681, 853, 679)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GroupArea/AreaDindia" unique_id=543934487]
+
+[node name="Label" type="Label" parent="GroupArea/AreaDindia/CanvasLayer" unique_id=999349299]
+top_level = true
+z_index = 1
+offset_left = 1092.0
+offset_top = 585.0
+offset_right = 1356.0
+offset_bottom = 608.0
+text = "Dindia c'est super !"
+metadata/_edit_use_anchors_ = true
+
+[node name="AreaCapistan" type="Area2D" parent="GroupArea" unique_id=583388022]
+script = ExtResource("5_l0oga")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GroupArea/AreaCapistan" unique_id=1649774191]
+polygon = PackedVector2Array(1351, 800, 1379, 770, 1479, 738, 1511, 720, 1507, 664, 1482, 598, 1460, 590, 1419, 609, 1392, 608, 1379, 571, 1403, 559, 1395, 525, 1408, 515, 1463, 475, 1508, 383, 1531, 295, 1551, 267, 1586, 243, 1601, 205, 1598, 161, 1578, 142, 1541, 124, 1524, 104, 1507, 68, 1574, 85, 1639, 113, 1671, 142, 1700, 180, 1717, 250, 1733, 327, 1726, 392, 1711, 475, 1690, 583, 1665, 661, 1634, 715, 1576, 763, 1518, 782, 1455, 795, 1404, 806)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GroupArea/AreaCapistan" unique_id=882535401]
+
+[node name="Label" type="Label" parent="GroupArea/AreaCapistan/CanvasLayer" unique_id=2024520960]
+top_level = true
+z_index = 1
+offset_left = 1477.0
+offset_top = 556.0
+offset_right = 1741.0
+offset_bottom = 579.0
+text = "Le Capistan, quelle arnaque !"
+metadata/_edit_use_anchors_ = true
+
+[node name="AreaOmottan" type="Area2D" parent="GroupArea" unique_id=1420824723]
+script = ExtResource("5_l0oga")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GroupArea/AreaOmottan" unique_id=380437524]
+polygon = PackedVector2Array(1530, 270, 1482, 262, 1466, 232, 1468, 180, 1467, 150, 1453, 108, 1439, 94, 1393, 84, 1354, 90, 1322, 107, 1302, 136, 1283, 180, 1253, 227, 1227, 262, 1204, 294, 1163, 319, 1098, 336, 1049, 338, 1031, 341, 1032, 398, 1024, 420, 1042, 449, 1042, 484, 1093, 486, 1154, 504, 1226, 527, 1257, 534, 1318, 526, 1345, 508, 1365, 494, 1380, 491, 1391, 500, 1413, 499, 1445, 473, 1474, 423, 1494, 369, 1509, 321)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GroupArea/AreaOmottan" unique_id=1851934764]
+
+[node name="Label" type="Label" parent="GroupArea/AreaOmottan/CanvasLayer" unique_id=136633855]
+top_level = true
+z_index = 1
+offset_left = 1199.0
+offset_top = 438.0
+offset_right = 1463.0
+offset_bottom = 461.0
+text = "A bas Trump !! "
+metadata/_edit_use_anchors_ = true
+
+[node name="AreaChinapon" type="Area2D" parent="GroupArea" unique_id=995653056]
+script = ExtResource("5_l0oga")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GroupArea/AreaChinapon" unique_id=380039670]
+polygon = PackedVector2Array(1181, 102, 1168, 82, 1119, 72, 1064, 59, 1008, 61, 933, 67, 832, 68, 793, 99, 752, 134, 688, 180, 666, 211, 671, 227, 683, 235, 731, 224, 756, 219, 772, 227, 764, 249, 756, 273, 763, 303, 775, 314, 772, 346, 767, 382, 795, 418, 845, 449, 884, 462, 921, 468, 956, 463, 972, 443, 998, 422, 1018, 404, 1016, 382, 1020, 350, 1020, 327, 977, 302, 952, 290, 914, 290, 876, 288, 865, 254, 887, 201, 914, 176, 955, 151, 1001, 122, 1035, 110, 1083, 103, 1121, 94)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GroupArea/AreaChinapon" unique_id=766975676]
+
+[node name="Label" type="Label" parent="GroupArea/AreaChinapon/CanvasLayer" unique_id=1509270616]
+top_level = true
+z_index = 1
+offset_left = 857.0
+offset_top = 386.0
+offset_right = 1121.0
+offset_bottom = 409.0
+text = "Le plein de culture !
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="AreaSultanat" type="Area2D" parent="GroupArea" unique_id=1462360881]
+script = ExtResource("5_l0oga")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GroupArea/AreaSultanat" unique_id=690891461]
+polygon = PackedVector2Array(801, 71, 717, 92, 628, 144, 543, 195, 484, 237, 432, 284, 407, 321, 394, 350, 406, 375, 377, 403, 339, 428, 293, 475, 258, 507, 176, 518, 153, 563, 187, 592, 234, 599, 264, 581, 290, 604, 280, 646, 302, 673, 328, 659, 341, 614, 337, 575, 368, 567, 438, 545, 456, 507, 472, 467, 512, 435, 545, 464, 594, 516, 636, 506, 670, 510, 702, 524, 736, 504, 755, 463, 754, 438, 734, 379, 737, 336, 758, 324, 746, 280, 747, 237, 700, 247, 669, 247, 648, 212, 675, 177, 728, 136)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GroupArea/AreaSultanat" unique_id=952336647]
+
+[node name="Label" type="Label" parent="GroupArea/AreaSultanat/CanvasLayer" unique_id=786564966]
+top_level = true
+z_index = 1
+offset_left = 572.0
+offset_top = 295.0
+offset_right = 836.0
+offset_bottom = 344.0
+text = "Vive la démoratie !!!"
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="GroupePays/EmpireOmottan/BoutonOmottan" to="GroupePays/EmpireOmottan/BoutonOmottan" method="_on_pressed"]
@@ -344,5 +441,15 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="GroupePays/Dindia/BoutonDindia" to="GroupePays" method="_on_bouton_dindia_pressed"]
 [connection signal="pressed" from="GroupePays/Capistan/BoutonCapistan" to="GroupePays" method="_on_bouton_capistan_pressed"]
 [connection signal="pressed" from="GroupePays/Europea/BoutonEuropea" to="GroupePays" method="_on_bouton_europea_pressed"]
-[connection signal="mouse_entered" from="GroupArea/CanvasLayer/Area2D" to="GroupArea/CanvasLayer/Area2D" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="GroupArea/CanvasLayer/Area2D" to="GroupArea/CanvasLayer/Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GroupArea/AreaEuropea" to="GroupArea/AreaEuropea" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GroupArea/AreaEuropea" to="GroupArea/AreaEuropea" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GroupArea/AreaDindia" to="GroupArea/AreaDindia" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GroupArea/AreaDindia" to="GroupArea/AreaDindia" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GroupArea/AreaCapistan" to="GroupArea/AreaCapistan" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GroupArea/AreaCapistan" to="GroupArea/AreaCapistan" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GroupArea/AreaOmottan" to="GroupArea/AreaOmottan" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GroupArea/AreaOmottan" to="GroupArea/AreaOmottan" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GroupArea/AreaChinapon" to="GroupArea/AreaChinapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GroupArea/AreaChinapon" to="GroupArea/AreaChinapon" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GroupArea/AreaSultanat" to="GroupArea/AreaSultanat" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GroupArea/AreaSultanat" to="GroupArea/AreaSultanat" method="_on_mouse_exited"]
