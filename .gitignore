@@ -2,3 +2,6 @@
 .godot/
 .nomedia
 /android/
+
+# idea specific
+.idea

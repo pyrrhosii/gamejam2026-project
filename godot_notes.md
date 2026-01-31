@@ -111,3 +111,20 @@ They are bridged using **CanvasLayer**.
 Instead of tightly coupling objects:
 ```gdscript
 object.do_something()
+```
+You emit signals:
+```gdscript
+signal activated
+activated.emit()
+```
+Other nodes connect and react independently.
+
+Common signals:
+- pressed
+- input_event
+- mouse_entered
+- Custom gameplay signals
+- Benefits:
+- Loose coupling
+- Cleaner architecture
+- Easier reuse and testing
