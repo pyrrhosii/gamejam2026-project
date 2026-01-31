@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://d0gjsyw2dw2m1"]
+
+[ext_resource type="Texture2D" uid="uid://bgnh2oklp3flx" path="res://assets/cabinet.jpg" id="1_8reo8"]
+[ext_resource type="Script" uid="uid://c3588ymaaukxb" path="res://scripts/archives/cabinet_arlequina_test_cm.gd" id="1_qfiul"]
+[ext_resource type="Texture2D" uid="uid://byofryw3mq6x6" path="res://assets/globe-ferme.png" id="2_u06f8"]
+[ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="4_euvms"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6sfa"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_qiyoi"]
+paragraph_spacing = 3.0
+font = ExtResource("4_euvms")
+font_size = 38
+outline_size = 1
+
+[node name="Cabinet_Arlequina" type="Node2D" unique_id=942869782]
+script = ExtResource("1_qfiul")
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=545148551]
+z_index = -2
+position = Vector2(967, 550.99994)
+scale = Vector2(0.52734363, 0.5273437)
+texture = ExtResource("1_8reo8")
+metadata/_edit_use_anchors_ = true
+
+[node name="GlobeFerme" type="Area2D" parent="." unique_id=398252623]
+
+[node name="GlobeFerme" type="Sprite2D" parent="GlobeFerme" unique_id=300909261]
+position = Vector2(535, 785)
+scale = Vector2(0.6866197, 0.60791767)
+texture = ExtResource("2_u06f8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GlobeFerme" unique_id=1267458501]
+position = Vector2(535, 785)
+scale = Vector2(0.6866197, 0.60791767)
+polygon = PackedVector2Array(-10.194885, -370.11584, 106.31793, -325.70197, 182.05127, -233.58423, 256.32825, -179.30054, 291.28198, -123.37195, 262.1538, -57.573486, 260.6974, 19.739624, 270.89233, 126.66199, 263.61023, 194.10522, 190.78973, 208.90991, 139.81537, 268.12842, 155.83588, 335.57178, 129.62048, 383.27563, 69.907715, 370.11597, 48.061523, 314.18738, -1.4564209, 282.9331, -129.62048, 268.12842, -189.33331, 281.2881, -230.1128, 309.25244, -266.52307, 269.77344, -281.08716, 134.88672, -281.08716, -44.41382, -304.38974, -110.21228, -279.63077, -195.75012, -244.67694, -210.55481, -206.81024, -297.7376, -139.81537, -355.31122, -64.08203, -378.34064)
+
+[node name="dialogueBoxTableau" type="CanvasLayer" parent="." unique_id=775718855]
+follow_viewport_enabled = true
+
+[node name="Panel" type="Panel" parent="dialogueBoxTableau" unique_id=1602997527]
+anchors_preset = -1
+anchor_left = 0.143
+anchor_top = 0.82500005
+anchor_right = 0.85700005
+anchor_bottom = 0.95500004
+offset_left = 0.44000244
+offset_top = -6.1035156e-05
+offset_right = -0.44006348
+offset_bottom = -0.4000244
+theme_override_styles/panel = SubResource("StyleBoxFlat_c6sfa")
+
+[node name="container" type="MarginContainer" parent="dialogueBoxTableau/Panel" unique_id=1448657170]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0320001
+anchor_bottom = 1.0
+offset_right = -43.840088
+metadata/_edit_lock_ = true
+
+[node name="downText" type="Label" parent="dialogueBoxTableau/Panel/container" unique_id=813671938]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_qiyoi")
+vertical_alignment = 3
+autowrap_mode = 2
+
+[connection signal="input_event" from="GlobeFerme" to="." method="_on_area_2d_input_event"]

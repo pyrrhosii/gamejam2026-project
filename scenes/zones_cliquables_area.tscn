@@ -19,7 +19,7 @@ font = ExtResource("4_tx1b5")
 font_size = 38
 outline_size = 1
 
-[node name="ZonesCliquables" type="Node2D" unique_id=1143038283]
+[node name="ZonesCliquablesArea" type="Node2D" unique_id=1143038283]
 
 [node name="Background" type="CanvasLayer" parent="." unique_id=1728141960]
 follow_viewport_enabled = true
