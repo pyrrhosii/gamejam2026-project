@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://vaq8qy5quybd"]
 
 [ext_resource type="Texture2D" uid="uid://fu6qp8884wc" path="res://assets/pays.jpg" id="1_x77u1"]
-[ext_resource type="Script" uid="uid://cq2b2o183u5a3" path="res://scenes/buttonGlobeZoomed.gd" id="2_gbhbn"]
 [ext_resource type="Texture2D" uid="uid://cs1j4ife5tahf" path="res://assets/icon.svg" id="2_x77u1"]
+[ext_resource type="Script" uid="uid://cq2b2o183u5a3" path="res://scripts/UI/buttonGlobeZoomed.gd" id="3_4yoag"]
 [ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="3_x77u1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4yoag"]
@@ -31,7 +31,7 @@ texture = ExtResource("1_x77u1")
 follow_viewport_enabled = true
 
 [node name="TextureButton" type="TextureButton" parent="EmpireOmottan" unique_id=889408401]
-anchors_preset = -1
+anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 1294.0
@@ -39,7 +39,7 @@ offset_top = -967.0
 offset_right = 1422.0
 offset_bottom = -839.0
 texture_normal = ExtResource("2_x77u1")
-script = ExtResource("2_gbhbn")
+script = ExtResource("3_4yoag")
 
 [node name="Panel" type="Panel" parent="EmpireOmottan" unique_id=1168036565]
 layout_direction = 2
@@ -76,7 +76,7 @@ autowrap_mode = 2
 follow_viewport_enabled = true
 
 [node name="TextureButton" type="TextureButton" parent="Chinapon" unique_id=1921339312]
-anchors_preset = -1
+anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 788.0
@@ -84,7 +84,7 @@ offset_top = -903.0
 offset_right = 916.0
 offset_bottom = -775.0
 texture_normal = ExtResource("2_x77u1")
-script = ExtResource("2_gbhbn")
+script = ExtResource("3_4yoag")
 
 [node name="Panel" type="Panel" parent="Chinapon" unique_id=418038949]
 layout_direction = 2
@@ -121,7 +121,7 @@ autowrap_mode = 2
 follow_viewport_enabled = true
 
 [node name="TextureButton" type="TextureButton" parent="Dindia" unique_id=900715461]
-anchors_preset = -1
+anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 1091.0
@@ -129,7 +129,7 @@ offset_top = -485.0
 offset_right = 1219.0
 offset_bottom = -357.0
 texture_normal = ExtResource("2_x77u1")
-script = ExtResource("2_gbhbn")
+script = ExtResource("3_4yoag")
 
 [node name="Panel" type="Panel" parent="Dindia" unique_id=1604391081]
 layout_direction = 2
@@ -166,7 +166,7 @@ autowrap_mode = 2
 follow_viewport_enabled = true
 
 [node name="TextureButton" type="TextureButton" parent="Sultanat" unique_id=562415080]
-anchors_preset = -1
+anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 574.0
@@ -176,7 +176,7 @@ offset_bottom = -694.0
 action_mode = 0
 button_mask = 0
 texture_normal = ExtResource("2_x77u1")
-script = ExtResource("2_gbhbn")
+script = ExtResource("3_4yoag")
 
 [node name="Panel" type="Panel" parent="Sultanat" unique_id=1976716791]
 layout_direction = 2
@@ -213,7 +213,7 @@ autowrap_mode = 2
 follow_viewport_enabled = true
 
 [node name="TextureButton" type="TextureButton" parent="Capistan" unique_id=1413229]
-anchors_preset = -1
+anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 1602.0
@@ -221,7 +221,7 @@ offset_top = -850.0
 offset_right = 1730.0
 offset_bottom = -722.0
 texture_normal = ExtResource("2_x77u1")
-script = ExtResource("2_gbhbn")
+script = ExtResource("3_4yoag")
 
 [node name="Panel" type="Panel" parent="Capistan" unique_id=185420407]
 layout_direction = 2
@@ -258,7 +258,7 @@ autowrap_mode = 2
 follow_viewport_enabled = true
 
 [node name="TextureButton" type="TextureButton" parent="Europea" unique_id=342895782]
-anchors_preset = -1
+anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 734.0
@@ -266,7 +266,7 @@ offset_top = -172.0
 offset_right = 862.0
 offset_bottom = -44.0
 texture_normal = ExtResource("2_x77u1")
-script = ExtResource("2_gbhbn")
+script = ExtResource("3_4yoag")
 
 [node name="Panel" type="Panel" parent="Europea" unique_id=959754041]
 layout_direction = 2
