@@ -1,0 +1,348 @@
+[gd_scene format=3 uid="uid://dj5w8h5m4d0yk"]
+
+[ext_resource type="Texture2D" uid="uid://fu6qp8884wc" path="res://assets/pays.jpg" id="1_knnb5"]
+[ext_resource type="Script" uid="uid://bdbjcm1eoipcy" path="res://scripts/archives/ordre_boutons_testCM.gd" id="2_bjss7"]
+[ext_resource type="Texture2D" uid="uid://cs1j4ife5tahf" path="res://assets/icon.svg" id="2_l0oga"]
+[ext_resource type="Script" uid="uid://cq2b2o183u5a3" path="res://scripts/archives/buttonGlobeZoomed_testCM.gd" id="3_l0oga"]
+[ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="4_tx1b5"]
+[ext_resource type="Script" uid="uid://bnwcmrqyjfu0a" path="res://scripts/archives/area_2d.gd" id="5_l0oga"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4yoag"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_7cbxb"]
+paragraph_spacing = 3.0
+font = ExtResource("4_tx1b5")
+font_size = 38
+outline_size = 1
+
+[node name="ZonesCliquables" type="Node2D" unique_id=1143038283]
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=1728141960]
+follow_viewport_enabled = true
+
+[node name="Pays" type="Sprite2D" parent="Background" unique_id=1826797596]
+position = Vector2(968, 541)
+scale = Vector2(0.51708984, 0.51708984)
+texture = ExtResource("1_knnb5")
+metadata/_edit_lock_ = true
+
+[node name="GroupePays" type="CanvasGroup" parent="." unique_id=801371692]
+script = ExtResource("2_bjss7")
+
+[node name="EmpireOmottan" type="CanvasLayer" parent="GroupePays" unique_id=889544775]
+follow_viewport_enabled = true
+
+[node name="BoutonOmottan" type="TextureButton" parent="GroupePays/EmpireOmottan" unique_id=889408401]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1294.0
+offset_top = -967.0
+offset_right = 1422.0
+offset_bottom = -839.0
+texture_normal = ExtResource("2_l0oga")
+script = ExtResource("3_l0oga")
+
+[node name="Panel" type="Panel" parent="GroupePays/EmpireOmottan" unique_id=1168036565]
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.143
+anchor_top = 0.82500005
+anchor_right = 0.85700005
+anchor_bottom = 0.95500004
+offset_left = 1164.44
+offset_top = -853.00006
+offset_right = 166.55994
+offset_bottom = -838.4
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4yoag")
+
+[node name="container" type="MarginContainer" parent="GroupePays/EmpireOmottan/Panel" unique_id=686075915]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.26000002
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = 277.02
+offset_bottom = -13.0
+
+[node name="Label" type="Label" parent="GroupePays/EmpireOmottan/Panel/container" unique_id=1316966645]
+layout_mode = 2
+text = "L'Empire Omottan, une région verdoyante"
+label_settings = SubResource("LabelSettings_7cbxb")
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="Chinapon" type="CanvasLayer" parent="GroupePays" unique_id=832325473]
+follow_viewport_enabled = true
+
+[node name="BoutonChinapon" type="TextureButton" parent="GroupePays/Chinapon" unique_id=1921339312]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 788.0
+offset_top = -903.0
+offset_right = 916.0
+offset_bottom = -775.0
+texture_normal = ExtResource("2_l0oga")
+script = ExtResource("3_l0oga")
+
+[node name="Panel" type="Panel" parent="GroupePays/Chinapon" unique_id=418038949]
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.143
+anchor_top = 0.82500005
+anchor_right = 0.85700005
+anchor_bottom = 0.95500004
+offset_left = 123.44
+offset_top = -821.00006
+offset_right = -874.44006
+offset_bottom = -806.4
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4yoag")
+
+[node name="container" type="MarginContainer" parent="GroupePays/Chinapon/Panel" unique_id=266055242]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.26000002
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = 277.02
+offset_bottom = -13.0
+
+[node name="Label" type="Label" parent="GroupePays/Chinapon/Panel/container" unique_id=1124869553]
+layout_mode = 2
+text = "Le Chinapon est plein de surprises !"
+label_settings = SubResource("LabelSettings_7cbxb")
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="Dindia" type="CanvasLayer" parent="GroupePays" unique_id=36098054]
+follow_viewport_enabled = true
+
+[node name="BoutonDindia" type="TextureButton" parent="GroupePays/Dindia" unique_id=900715461]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1091.0
+offset_top = -485.0
+offset_right = 1219.0
+offset_bottom = -357.0
+texture_normal = ExtResource("2_l0oga")
+script = ExtResource("3_l0oga")
+
+[node name="Panel" type="Panel" parent="GroupePays/Dindia" unique_id=1604391081]
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.143
+anchor_top = 0.82500005
+anchor_right = 0.85700005
+anchor_bottom = 0.95500004
+offset_left = 953.44
+offset_top = -249.00006
+offset_right = -44.440063
+offset_bottom = -234.40002
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4yoag")
+
+[node name="container" type="MarginContainer" parent="GroupePays/Dindia/Panel" unique_id=1343497382]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.26000002
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = 277.02
+offset_bottom = -13.0
+
+[node name="Label" type="Label" parent="GroupePays/Dindia/Panel/container" unique_id=341530391]
+layout_mode = 2
+text = "Dindia ! Mon pays idéal !"
+label_settings = SubResource("LabelSettings_7cbxb")
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="Sultanat" type="CanvasLayer" parent="GroupePays" unique_id=183082781]
+follow_viewport_enabled = true
+
+[node name="BoutonSultanat" type="TextureButton" parent="GroupePays/Sultanat" unique_id=235135567]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 550.0
+offset_top = -774.0
+offset_right = 678.0
+offset_bottom = -646.0
+grow_vertical = 0
+texture_normal = ExtResource("2_l0oga")
+script = ExtResource("3_l0oga")
+
+[node name="Panel" type="Panel" parent="GroupePays/Sultanat" unique_id=247000312]
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.143
+anchor_top = 0.82500005
+anchor_right = 0.85700005
+anchor_bottom = 0.95500004
+offset_left = 13.440002
+offset_top = -458.00006
+offset_right = -984.44006
+offset_bottom = -443.40002
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4yoag")
+
+[node name="container" type="MarginContainer" parent="GroupePays/Sultanat/Panel" unique_id=473049731]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.26000002
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = 277.02
+offset_bottom = -13.0
+
+[node name="Label" type="Label" parent="GroupePays/Sultanat/Panel/container" unique_id=1422124175]
+layout_mode = 2
+text = "Une terrible dictature !"
+label_settings = SubResource("LabelSettings_7cbxb")
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="Capistan" type="CanvasLayer" parent="GroupePays" unique_id=569604350]
+follow_viewport_enabled = true
+
+[node name="BoutonCapistan" type="TextureButton" parent="GroupePays/Capistan" unique_id=1413229]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1554.0
+offset_top = -753.0
+offset_right = 1682.0
+offset_bottom = -625.0
+grow_vertical = 0
+texture_normal = ExtResource("2_l0oga")
+script = ExtResource("3_l0oga")
+
+[node name="Panel" type="Panel" parent="GroupePays/Capistan" unique_id=185420407]
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.143
+anchor_top = 0.82500005
+anchor_right = 0.85700005
+anchor_bottom = 0.95500004
+offset_left = 1017.44
+offset_top = -437.00006
+offset_right = 19.559937
+offset_bottom = -422.40002
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4yoag")
+
+[node name="container" type="MarginContainer" parent="GroupePays/Capistan/Panel" unique_id=818489872]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.26000002
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = 277.02
+offset_bottom = -13.0
+
+[node name="Label" type="Label" parent="GroupePays/Capistan/Panel/container" unique_id=878493640]
+layout_mode = 2
+text = "Le Capistan, quelle arnaque !"
+label_settings = SubResource("LabelSettings_7cbxb")
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="Europea" type="CanvasLayer" parent="GroupePays" unique_id=1597976301]
+follow_viewport_enabled = true
+
+[node name="BoutonEuropea" type="TextureButton" parent="GroupePays/Europea" unique_id=342895782]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 752.0
+offset_top = -187.0
+offset_right = 880.0
+offset_bottom = -59.0
+grow_vertical = 0
+texture_normal = ExtResource("2_l0oga")
+script = ExtResource("3_l0oga")
+
+[node name="Panel" type="Panel" parent="GroupePays/Europea" unique_id=959754041]
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.143
+anchor_top = 0.82500005
+anchor_right = 0.85700005
+anchor_bottom = 0.95500004
+offset_left = 605.44
+offset_top = -8.000061
+offset_right = -392.44006
+offset_bottom = 6.5999756
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4yoag")
+
+[node name="container" type="MarginContainer" parent="GroupePays/Europea/Panel" unique_id=554737704]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.26000002
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 11.0
+offset_right = 276.02
+offset_bottom = -5.0
+
+[node name="Label" type="Label" parent="GroupePays/Europea/Panel/container" unique_id=1429398339]
+layout_mode = 2
+text = "Europea ! Une région sauvage !"
+label_settings = SubResource("LabelSettings_7cbxb")
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="CanvasLabelSuccess" type="CanvasLayer" parent="GroupePays" unique_id=1364895753]
+
+[node name="LabelSuccess" type="Label" parent="GroupePays/CanvasLabelSuccess" unique_id=1772573282]
+offset_left = 183.0
+offset_top = 828.0
+offset_right = 454.0
+offset_bottom = 877.0
+text = "You did it !! 
+"
+
+[node name="GroupArea" type="CanvasGroup" parent="." unique_id=1608104507]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GroupArea" unique_id=1353238664]
+
+[node name="Area2D" type="Area2D" parent="GroupArea/CanvasLayer" unique_id=812060138]
+script = ExtResource("5_l0oga")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GroupArea/CanvasLayer/Area2D" unique_id=1410413063]
+position = Vector2(784.827, 668.649)
+polygon = PackedVector2Array(-252.82703, -126.64899, -181.82703, -140.64899, -142.82703, -149.64899, -96.82703, -132.64899, -63.827026, -128.64899, -33.827026, -162.64899, -10.827026, -197.64899, 0.17297363, -164.64899, -5.8270264, -125.64899, -17.827026, -97.64899, -9.827026, -65.64899, -0.82702637, -14.648987, 18.172974, 11.351013, 52.172974, 20.351013, 110.17297, 24.351013, 152.17297, 33.351013, 204.17297, 59.351013, 233.17297, 87.35101, 277.17297, 114.35101, 355.17297, 147.35101, 365.17297, 156.35101, 304.17297, 161.35101, 226.17297, 183.35101, 176.17297, 215.35101, 138.17297, 248.35101, 92.17297, 284.351, 12.172974, 302.351, -87.82703, 293.351, -156.82703, 284.351, -207.82703, 263.351, -239.82703, 223.35101, -248.82703, 188.35101, -245.82703, 139.35101, -237.82703, 90.35101, -227.82703, 30.351013, -232.82703, -29.648987, -247.82703, -81.64899, -250.82703, -125.64899)
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="GroupArea/CanvasLayer/Area2D" unique_id=585060735]
+top_level = true
+z_index = 1
+offset_left = 589.0
+offset_top = 773.0
+offset_right = 832.0
+offset_bottom = 796.0
+text = "Europea, cette ville merveilleuse !!"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="GroupePays/EmpireOmottan/BoutonOmottan" to="GroupePays/EmpireOmottan/BoutonOmottan" method="_on_pressed"]
+[connection signal="pressed" from="GroupePays/Chinapon/BoutonChinapon" to="GroupePays" method="_on_bouton_chinapon_pressed"]
+[connection signal="pressed" from="GroupePays/Dindia/BoutonDindia" to="GroupePays" method="_on_bouton_dindia_pressed"]
+[connection signal="pressed" from="GroupePays/Capistan/BoutonCapistan" to="GroupePays" method="_on_bouton_capistan_pressed"]
+[connection signal="pressed" from="GroupePays/Europea/BoutonEuropea" to="GroupePays" method="_on_bouton_europea_pressed"]
+[connection signal="mouse_entered" from="GroupArea/CanvasLayer/Area2D" to="GroupArea/CanvasLayer/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GroupArea/CanvasLayer/Area2D" to="GroupArea/CanvasLayer/Area2D" method="_on_mouse_exited"]
