@@ -47,6 +47,10 @@ position = Vector2(535, 785)
 scale = Vector2(0.6866197, 0.60791767)
 texture = ExtResource("2_milfc")
 
+[node name="globeZoomLayer" type="CanvasLayer" parent="." unique_id=228208494]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="globeZoomLayer" unique_id=2031897373]
+
 [node name="dialogueBoxTableau" type="CanvasLayer" parent="." unique_id=775718855]
 follow_viewport_enabled = true
 
@@ -87,5 +91,3 @@ layout_mode = 2
 label_settings = SubResource("LabelSettings_qiyoi")
 vertical_alignment = 3
 autowrap_mode = 2
-
-[node name="globeZoomLayer" type="CanvasLayer" parent="." unique_id=228208494]

@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://d2ltmrb6ftq8w"]
+
+[ext_resource type="Texture2D" uid="uid://iw1xghepie3s" path="res://assets/map.jpg" id="1_51t4m"]
+[ext_resource type="Script" uid="uid://blqkvesuwj31c" path="res://scripts/model/areaCollision.gd" id="1_j1py2"]
+[ext_resource type="Texture2D" uid="uid://bmryapkgciecg" path="res://assets/fingerprint.png" id="2_51t4m"]
+[ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="4_65ruu"]
+[ext_resource type="Script" uid="uid://cgh5j74gv16oq" path="res://scripts/UI/close_window.gd" id="5_j1py2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4yoag"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_j1py2"]
+font = ExtResource("4_65ruu")
+font_size = 33
+font_color = Color(0, 0, 0, 1)
+
+[node name="zoomed_globe_arlequina" type="Node2D" unique_id=1143038283]
+position = Vector2(3.500122, -4)
+script = ExtResource("1_j1py2")
+
+[node name="Pays" type="Sprite2D" parent="." unique_id=1826797596]
+position = Vector2(1014.4999, 398)
+scale = Vector2(0.3351368, 0.33326882)
+texture = ExtResource("1_51t4m")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=349885185]
+position = Vector2(140.49988, 245)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=357090872]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(572, 30.999996)
+rotation = 0.29586083
+scale = Vector2(0.4523099, 0.47540313)
+texture = ExtResource("2_51t4m")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=977051886]
+polygon = PackedVector2Array(545, 1, 589, 1, 607, 11, 607, 42, 589, 55, 554, 53)
+
+[node name="Capistan" type="CanvasLayer" parent="Area2D" unique_id=14013335]
+
+[node name="Panel6" type="Panel" parent="Area2D/Capistan" unique_id=1831341927]
+visible = false
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.14299999
+anchor_top = 0.82500005
+anchor_right = 0.37325242
+anchor_bottom = 0.91945565
+offset_left = 220.44
+offset_top = -706.00006
+offset_right = -26.480103
+offset_bottom = -757.00006
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4yoag")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Area2D/Capistan/Panel6" unique_id=535854909]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.004504505
+anchor_right = 0.9954955
+anchor_bottom = 1.0
+offset_left = 18.164581
+offset_top = 5.012024
+offset_right = -15.835388
+offset_bottom = -17.987915
+text = "ça semble usé"
+label_settings = SubResource("LabelSettings_j1py2")
+vertical_alignment = 3
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=896543145]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1147268179]
+anchors_preset = -1
+anchor_left = 0.79300004
+anchor_top = 0.063
+anchor_right = 0.809
+anchor_bottom = 0.09200001
+offset_left = -5.5600586
+offset_top = 5.959999
+offset_right = -6.2800293
+offset_bottom = 5.6399918
+text = "X"
+script = ExtResource("5_j1py2")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

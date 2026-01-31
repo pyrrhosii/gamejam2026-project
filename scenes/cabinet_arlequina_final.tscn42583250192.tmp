@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://cxe0m7kexxxy7"]
+[gd_scene format=3 uid="uid://bx7tahohjtkgu"]
 
-[ext_resource type="Texture2D" uid="uid://bgnh2oklp3flx" path="res://assets/cabinet.jpg" id="1_8reo8"]
-[ext_resource type="Script" path="res://scripts/archives/cabinet_arlequina_test_cm.gd" id="1_qfiul"]
-[ext_resource type="Texture2D" uid="uid://byofryw3mq6x6" path="res://assets/globe-ferme.png" id="2_u06f8"]
-[ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="4_euvms"]
+[ext_resource type="Script" uid="uid://c3588ymaaukxb" path="res://scripts/archives/cabinet_arlequina_test_cm.gd" id="1_ttdry"]
+[ext_resource type="Texture2D" uid="uid://bgnh2oklp3flx" path="res://assets/cabinet.jpg" id="2_rfe12"]
+[ext_resource type="Texture2D" uid="uid://byofryw3mq6x6" path="res://assets/globe-ferme.png" id="3_vdrbd"]
+[ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="4_lh0ae"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6sfa"]
 border_width_left = 2
@@ -13,18 +13,18 @@ border_width_bottom = 2
 
 [sub_resource type="LabelSettings" id="LabelSettings_qiyoi"]
 paragraph_spacing = 3.0
-font = ExtResource("4_euvms")
+font = ExtResource("4_lh0ae")
 font_size = 38
 outline_size = 1
 
 [node name="Cabinet_Arlequina" type="Node2D" unique_id=942869782]
-script = ExtResource("1_qfiul")
+script = ExtResource("1_ttdry")
 
 [node name="Background2" type="Sprite2D" parent="." unique_id=545148551]
 z_index = -2
 position = Vector2(960.00006, 544)
 scale = Vector2(0.52734363, 0.5273437)
-texture = ExtResource("1_8reo8")
+texture = ExtResource("2_rfe12")
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
@@ -33,7 +33,7 @@ metadata/_edit_lock_ = true
 [node name="GlobeFerme" type="Sprite2D" parent="GlobeFerme" unique_id=300909261]
 position = Vector2(535, 785)
 scale = Vector2(0.6866197, 0.60791767)
-texture = ExtResource("2_u06f8")
+texture = ExtResource("3_vdrbd")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GlobeFerme" unique_id=1267458501]
 position = Vector2(535, 785)

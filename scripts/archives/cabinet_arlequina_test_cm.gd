@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var panel = $dialogueBoxTableau/Panel
 @onready var downText = $dialogueBoxTableau/Panel/container/downText
-@onready var map_scene = preload("res://scenes/zones_cliquables_area.tscn")
+@onready var map_scene = preload("res://scenes/zoomed_globe_arlequina.tscn")
 func _ready():
 	# Cache le panel au démarrage
 	panel.visible = false

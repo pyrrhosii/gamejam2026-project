@@ -1,7 +1,6 @@
 extends TextureButton
 
 @onready var panel = $"../Panel"  # Ajuste le chemin selon ta structure
-#@onready var textureButton = $TextureButton
 
 var zoomLayer
 var zoom
@@ -9,7 +8,6 @@ var zoom
 func _ready():
 	# Cache le panel au démarrage
 	panel.visible = false
-
 	zoom = get_tree().root.get_node("ZonesCliquables")
 	
 	# Connecte le signal de clic
@@ -19,11 +17,11 @@ func _ready():
 
 func _on_button_hover():
 	# Affiche le panel quand on clique
-	panel.visible = !panel.visible
+	panel.visible = true
 	
 func _on_button_exit():
 	# Affiche le panel quand on clique
-	panel.visible = !panel.visible
+	panel.visible = false
 	
 func _on_button_click():
 	panel.visible = !panel.visible

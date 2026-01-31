@@ -1,0 +1,312 @@
+[gd_scene format=3 uid="uid://d2ltmrb6ftq8w"]
+
+[ext_resource type="Texture2D" uid="uid://iw1xghepie3s" path="res://assets/map.jpg" id="1_51t4m"]
+[ext_resource type="Texture2D" uid="uid://bmryapkgciecg" path="res://assets/fingerprint.png" id="2_51t4m"]
+[ext_resource type="Script" uid="uid://cq2b2o183u5a3" path="res://scripts/UI/buttonGlobeZoomed.gd" id="3_i8h24"]
+[ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="4_65ruu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4yoag"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_7cbxb"]
+paragraph_spacing = 3.0
+font = ExtResource("4_65ruu")
+font_size = 38
+outline_size = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_j1py2"]
+font_size = 33
+font_color = Color(0, 0, 0, 1)
+
+[node name="zoomed_globe_arlequina" type="Node2D" unique_id=1143038283]
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=1728141960]
+follow_viewport_enabled = true
+
+[node name="Pays" type="Sprite2D" parent="Background" unique_id=1826797596]
+position = Vector2(964.49994, 547.18744)
+scale = Vector2(0.59590954, 0.526184)
+texture = ExtResource("1_51t4m")
+metadata/_edit_lock_ = true
+
+[node name="EmpireOmottan" type="CanvasLayer" parent="." unique_id=889544775]
+follow_viewport_enabled = true
+
+[node name="TextureButton" type="TextureButton" parent="EmpireOmottan" unique_id=889408401]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1460.0
+offset_top = -1010.00006
+offset_right = 1590.0
+offset_bottom = -839.0
+grow_vertical = 0
+rotation = 0.7444099
+texture_normal = ExtResource("2_51t4m")
+script = ExtResource("3_i8h24")
+
+[node name="Panel" type="Panel" parent="EmpireOmottan" unique_id=1168036565]
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.143
+anchor_top = 0.82500005
+anchor_right = 0.85700005
+anchor_bottom = 0.95500004
+offset_left = 1713.44
+offset_top = -818.00006
+offset_right = 876.55994
+offset_bottom = -803.4
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4yoag")
+
+[node name="Label" type="Label" parent="EmpireOmottan/Panel" unique_id=1316966645]
+layout_mode = 0
+offset_top = 27.0
+offset_right = 415.0
+offset_bottom = 118.0
+text = "L'Empire Omottan, une région verdoyante"
+label_settings = SubResource("LabelSettings_7cbxb")
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="container" type="MarginContainer" parent="EmpireOmottan/Panel" unique_id=686075915]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.26000002
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = 277.02
+offset_bottom = -13.0
+
+[node name="Chinapon" type="CanvasLayer" parent="." unique_id=832325473]
+follow_viewport_enabled = true
+
+[node name="TextureButton" type="TextureButton" parent="Chinapon" unique_id=1921339312]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 884.0
+offset_top = -792.0
+offset_right = 1014.0
+offset_bottom = -621.0
+grow_vertical = 0
+texture_normal = ExtResource("2_51t4m")
+script = ExtResource("3_i8h24")
+
+[node name="Panel" type="Panel" parent="Chinapon" unique_id=418038949]
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.143
+anchor_top = 0.82500005
+anchor_right = 0.85700005
+anchor_bottom = 0.95500004
+offset_left = 609.44
+offset_top = -791.00006
+offset_right = -457.44006
+offset_bottom = -776.4001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4yoag")
+
+[node name="container" type="MarginContainer" parent="Chinapon/Panel" unique_id=266055242]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.26000002
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = 224.95999
+offset_bottom = -57.99994
+
+[node name="Label" type="Label" parent="Chinapon/Panel/container" unique_id=1124869553]
+layout_mode = 2
+text = "Le Chinapon est plein de surprises !"
+label_settings = SubResource("LabelSettings_7cbxb")
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="Dindia" type="CanvasLayer" parent="." unique_id=36098054]
+follow_viewport_enabled = true
+
+[node name="TextureButton" type="TextureButton" parent="Dindia" unique_id=900715461]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1124.0
+offset_top = -587.0
+offset_right = 1254.0
+offset_bottom = -416.0
+grow_vertical = 0
+texture_normal = ExtResource("2_51t4m")
+script = ExtResource("3_i8h24")
+
+[node name="Panel" type="Panel" parent="Dindia" unique_id=1604391081]
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.143
+anchor_top = 0.82500005
+anchor_right = 0.85700005
+anchor_bottom = 0.95500004
+offset_left = 1689.44
+offset_top = -302.00006
+offset_right = 928.55994
+offset_bottom = -287.40002
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4yoag")
+
+[node name="container" type="MarginContainer" parent="Dindia/Panel" unique_id=1343497382]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.26000002
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_right = 277.02
+offset_bottom = -13.0
+
+[node name="Label" type="Label" parent="Dindia/Panel/container" unique_id=341530391]
+layout_mode = 2
+text = "Dindia ! Mon pays idéal !"
+label_settings = SubResource("LabelSettings_7cbxb")
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="Sultanat" type="CanvasLayer" parent="." unique_id=183082781]
+follow_viewport_enabled = true
+
+[node name="TextureButton" type="TextureButton" parent="Sultanat" unique_id=562415080]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 574.0
+offset_top = -822.0
+offset_right = 702.0
+offset_bottom = -694.0
+grow_vertical = 0
+action_mode = 0
+button_mask = 0
+script = ExtResource("3_i8h24")
+
+[node name="Panel" type="Panel" parent="Sultanat" unique_id=1976716791]
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.143
+anchor_top = 0.82500005
+anchor_right = 0.85700005
+anchor_bottom = 0.95500004
+offset_left = -233.56
+offset_top = -791.00006
+offset_right = -1230.4401
+offset_bottom = -776.4
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4yoag")
+
+[node name="container" type="MarginContainer" parent="Sultanat/Panel" unique_id=1384473054]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.26000002
+anchor_bottom = 1.0
+offset_top = 50.0
+offset_right = 277.02002
+offset_bottom = 34.0
+
+[node name="Label" type="Label" parent="Sultanat/Panel/container" unique_id=1670382894]
+layout_mode = 2
+text = "Une terrible dictature !"
+label_settings = SubResource("LabelSettings_7cbxb")
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="Capistan" type="CanvasLayer" parent="." unique_id=569604350]
+follow_viewport_enabled = true
+
+[node name="Panel" type="Panel" parent="Capistan" unique_id=185420407]
+layout_direction = 2
+anchors_preset = -1
+anchor_left = -37.72
+anchor_top = 0.95500004
+anchor_right = -29.550001
+anchor_bottom = 1.0
+offset_left = 74025.41
+offset_top = -881.4
+offset_right = 73988.61
+offset_bottom = -733.2
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4yoag")
+
+[node name="Label" type="Label" parent="Capistan/Panel" unique_id=878493640]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 29.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Le Capistan, quelle arnaque !"
+label_settings = SubResource("LabelSettings_7cbxb")
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Capistan" unique_id=1413229]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1498.0
+offset_top = -587.0
+offset_right = 1628.0
+offset_bottom = -414.0
+grow_vertical = 0
+texture_normal = ExtResource("2_51t4m")
+script = ExtResource("3_i8h24")
+
+[node name="Europea" type="CanvasLayer" parent="." unique_id=1597976301]
+follow_viewport_enabled = true
+
+[node name="TextureButton" type="TextureButton" parent="Europea" unique_id=342895782]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 640.0
+offset_top = -238.0
+offset_right = 770.0
+offset_bottom = -67.0
+grow_vertical = 0
+rotation = 2.2859597
+texture_normal = ExtResource("2_51t4m")
+script = ExtResource("3_i8h24")
+
+[node name="Panel" type="Panel" parent="Europea" unique_id=959754041]
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.143
+anchor_top = 0.82500005
+anchor_right = 0.39400002
+anchor_bottom = 0.975
+offset_left = 35.440002
+offset_top = 22.999939
+offset_right = 28.519958
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4yoag")
+
+[node name="container" type="MarginContainer" parent="Europea/Panel" unique_id=554737704]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.26000002
+anchor_bottom = 1.0
+offset_left = 31.0
+offset_right = 308.02
+offset_bottom = -16.0
+
+[node name="Label" type="Label" parent="Europea/Panel/container" unique_id=1429398339]
+layout_mode = 2
+text = "Europea ! Une région sauvage !"
+label_settings = SubResource("LabelSettings_j1py2")
+vertical_alignment = 3
+autowrap_mode = 2
