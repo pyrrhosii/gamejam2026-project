@@ -9,7 +9,7 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 
-[node name="Cabinet-arlequina" type="Node2D" unique_id=942869782]
+[node name="Cabinet-pantalone" type="Node2D" unique_id=942869782]
 
 [node name="Background" type="CanvasLayer" parent="." unique_id=1468266225]
 follow_viewport_enabled = true
