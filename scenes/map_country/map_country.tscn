@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dnuispgxtdhk1"]
+
+[ext_resource type="Script" uid="uid://d4mrwuyio5efh" path="res://scenes/map_country.gd" id="1_5r88b"]
+[ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="2_m60g6"]
+
+[node name="MapCountry" type="Area2D" unique_id=1073306642]
+script = ExtResource("1_5r88b")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=4273911]
+polygon = PackedVector2Array(1009, 7, 1054, 620, 0, 629, 7, 7)
+
+[node name="TooltipLocation" type="Marker2D" parent="." unique_id=687854010]
+position = Vector2(1080, 523)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1584606211]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=884639455]
+offset_right = 261.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0.11119685, 0.11119684, 0.11119684, 0.78039217)
+theme_override_fonts/font = ExtResource("2_m60g6")
+theme_override_font_sizes/font_size = 38
+text = "Ici une petite description du pays."
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

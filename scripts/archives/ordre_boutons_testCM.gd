@@ -9,25 +9,25 @@ var etape_actuelle = 0    # Combien de clics corrects
 @onready var texte = CanvasText.get_node("LabelSuccess")
 @onready var bouton_omottan = $EmpireOmottan
 @onready var bouton_chinapon = $Chinapon
-@onready var bouton_dindia = $Dindia
+#@onready var bouton_dindia = $Dindia
 @onready var bouton_sultanat = $Sultanat
-@onready var bouton_capistan = $Capistan
+#@onready var bouton_capistan = $Capistan
 @onready var bouton_europea = $Europea
 
 func _ready():
 	# CONNECTE les boutons (ultra important !)
 	var omot = bouton_omottan.get_node("BoutonOmottan")
 	var china = bouton_chinapon.get_node("BoutonChinapon")
-	var dindia = bouton_dindia.get_node("BoutonDindia")
+	# var dindia = bouton_dindia.get_node("BoutonDindia")
 	var sult = bouton_sultanat.get_node("BoutonSultanat")
-	var cap = bouton_capistan.get_node("BoutonCapistan")
+	#var cap = bouton_capistan.get_node("BoutonCapistan")
 	var eur = bouton_europea.get_node("BoutonEuropea")
 	
 	omot.pressed.connect(_on_bouton_omottan)
 	china.pressed.connect(_on_bouton_chinapon)
-	dindia.pressed.connect(_on_bouton_dindia)
+	#dindia.pressed.connect(_on_bouton_dindia)
 	sult.pressed.connect(_on_bouton_sultanat)
-	cap.pressed.connect(_on_bouton_capistan)
+	#cap.pressed.connect(_on_bouton_capistan)
 	eur.pressed.connect(_on_bouton_europea)
 	
 	texte.visible = false
@@ -40,14 +40,14 @@ func _on_bouton_omottan():
 func _on_bouton_chinapon():
 	verifie_clic(1)  # 1 = Chinapon
 
-func _on_bouton_dindia():
-	verifie_clic(2)  # 2 = Dindia
+#func _on_bouton_dindia():
+#	verifie_clic(2)  # 2 = Dindia
 	
 func _on_bouton_sultanat():
 	verifie_clic(3)
 	
-func _on_bouton_capistan():
-	verifie_clic(4)
+#func _on_bouton_capistan():
+#	verifie_clic(4)
 	
 func _on_bouton_europea():
 	verifie_clic(5)  
@@ -82,3 +82,7 @@ func reinitialise_tout():
 	# Attendre 2 secondes puis reset
 	#await get_tree().create_timer(2.0).timeout
 	reset_sequence()
+
+func _on_country_clicked(countryId: int) -> void:
+	print("A country on the map has been clicked: " + str(countryId))
+	verifie_clic(countryId)

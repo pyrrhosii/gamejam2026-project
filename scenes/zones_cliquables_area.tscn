@@ -3,9 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://fu6qp8884wc" path="res://assets/pays.jpg" id="1_knnb5"]
 [ext_resource type="Script" uid="uid://bdbjcm1eoipcy" path="res://scripts/archives/ordre_boutons_testCM.gd" id="2_bjss7"]
 [ext_resource type="Texture2D" uid="uid://cs1j4ife5tahf" path="res://assets/icon.svg" id="2_l0oga"]
-[ext_resource type="Script" uid="uid://cq2b2o183u5a3" path="res://scripts/archives/buttonGlobeZoomed_testCM.gd" id="3_l0oga"]
+[ext_resource type="Script" uid="uid://cq2b2o183u5a3" path="res://scripts/UI/buttonGlobeZoomed.gd" id="3_l0oga"]
 [ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="4_tx1b5"]
 [ext_resource type="Script" uid="uid://bnwcmrqyjfu0a" path="res://scripts/archives/area_2d.gd" id="5_l0oga"]
+[ext_resource type="PackedScene" uid="uid://dnuispgxtdhk1" path="res://scenes/map_country.tscn" id="7_tx1b5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4yoag"]
 border_width_left = 2
@@ -123,51 +124,6 @@ label_settings = SubResource("LabelSettings_7cbxb")
 vertical_alignment = 3
 autowrap_mode = 2
 
-[node name="Dindia" type="CanvasLayer" parent="GroupePays" unique_id=36098054]
-follow_viewport_enabled = true
-
-[node name="BoutonDindia" type="TextureButton" parent="GroupePays/Dindia" unique_id=900715461]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 1091.0
-offset_top = -485.0
-offset_right = 1219.0
-offset_bottom = -357.0
-texture_normal = ExtResource("2_l0oga")
-script = ExtResource("3_l0oga")
-
-[node name="Panel" type="Panel" parent="GroupePays/Dindia" unique_id=1604391081]
-layout_direction = 2
-anchors_preset = -1
-anchor_left = 0.143
-anchor_top = 0.82500005
-anchor_right = 0.85700005
-anchor_bottom = 0.95500004
-offset_left = 953.44
-offset_top = -249.00006
-offset_right = -44.440063
-offset_bottom = -234.40002
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_4yoag")
-
-[node name="container" type="MarginContainer" parent="GroupePays/Dindia/Panel" unique_id=1343497382]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.26000002
-anchor_bottom = 1.0
-offset_top = 3.0
-offset_right = 277.02
-offset_bottom = -13.0
-
-[node name="Label" type="Label" parent="GroupePays/Dindia/Panel/container" unique_id=341530391]
-layout_mode = 2
-text = "Dindia ! Mon pays idéal !"
-label_settings = SubResource("LabelSettings_7cbxb")
-vertical_alignment = 3
-autowrap_mode = 2
-
 [node name="Sultanat" type="CanvasLayer" parent="GroupePays" unique_id=183082781]
 follow_viewport_enabled = true
 
@@ -210,52 +166,6 @@ offset_bottom = -13.0
 [node name="Label" type="Label" parent="GroupePays/Sultanat/Panel/container" unique_id=1422124175]
 layout_mode = 2
 text = "Une terrible dictature !"
-label_settings = SubResource("LabelSettings_7cbxb")
-vertical_alignment = 3
-autowrap_mode = 2
-
-[node name="Capistan" type="CanvasLayer" parent="GroupePays" unique_id=569604350]
-follow_viewport_enabled = true
-
-[node name="BoutonCapistan" type="TextureButton" parent="GroupePays/Capistan" unique_id=1413229]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 1554.0
-offset_top = -753.0
-offset_right = 1682.0
-offset_bottom = -625.0
-grow_vertical = 0
-texture_normal = ExtResource("2_l0oga")
-script = ExtResource("3_l0oga")
-
-[node name="Panel" type="Panel" parent="GroupePays/Capistan" unique_id=185420407]
-layout_direction = 2
-anchors_preset = -1
-anchor_left = 0.143
-anchor_top = 0.82500005
-anchor_right = 0.85700005
-anchor_bottom = 0.95500004
-offset_left = 1017.44
-offset_top = -437.00006
-offset_right = 19.559937
-offset_bottom = -422.40002
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_4yoag")
-
-[node name="container" type="MarginContainer" parent="GroupePays/Capistan/Panel" unique_id=818489872]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.26000002
-anchor_bottom = 1.0
-offset_top = 3.0
-offset_right = 277.02
-offset_bottom = -13.0
-
-[node name="Label" type="Label" parent="GroupePays/Capistan/Panel/container" unique_id=878493640]
-layout_mode = 2
-text = "Le Capistan, quelle arnaque !"
 label_settings = SubResource("LabelSettings_7cbxb")
 vertical_alignment = 3
 autowrap_mode = 2
@@ -317,6 +227,27 @@ offset_bottom = 877.0
 text = "You did it !! 
 "
 
+[node name="Dindia" parent="GroupePays" unique_id=1073306642 instance=ExtResource("7_tx1b5")]
+id = 2
+tooltipText = "Dindia ! Mon pays idéal !"
+
+[node name="CollisionPolygon2D" parent="GroupePays/Dindia" index="0" unique_id=4273911]
+polygon = PackedVector2Array(815, 676, 826, 614, 881, 574, 991, 544, 1038, 493, 1122, 501, 1261, 540, 1372, 582, 1393, 616, 1471, 602, 1485, 632, 1499, 702, 1346, 757, 1338, 801, 1157, 829, 1003, 722, 906, 687)
+
+[node name="TooltipLocation" parent="GroupePays/Dindia" index="1" unique_id=687854010]
+position = Vector2(1288, 675)
+gizmo_extents = 0.0
+
+[node name="Capistan" parent="GroupePays" unique_id=1070019543 instance=ExtResource("7_tx1b5")]
+id = 4
+tooltipText = "Le Capistan, quelle arnaque !"
+
+[node name="CollisionPolygon2D" parent="GroupePays/Capistan" index="0" unique_id=4273911]
+polygon = PackedVector2Array(1348, 816, 1525, 800, 1628, 743, 1676, 655, 1705, 526, 1721, 429, 1734, 323, 1727, 243, 1705, 185, 1664, 112, 1612, 90, 1591, 154, 1591, 217, 1549, 258, 1512, 342, 1486, 412, 1450, 473, 1393, 504, 1355, 508, 1398, 551, 1371, 570, 1386, 608, 1412, 615, 1469, 598, 1503, 697, 1499, 716, 1383, 765, 1352, 788, 1341, 800)
+
+[node name="TooltipLocation" parent="GroupePays/Capistan" index="1" unique_id=687854010]
+position = Vector2(1635, 338)
+
 [node name="GroupArea" type="CanvasGroup" parent="." unique_id=1608104507]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="GroupArea" unique_id=1353238664]
@@ -341,8 +272,11 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="GroupePays/EmpireOmottan/BoutonOmottan" to="GroupePays/EmpireOmottan/BoutonOmottan" method="_on_pressed"]
 [connection signal="pressed" from="GroupePays/Chinapon/BoutonChinapon" to="GroupePays" method="_on_bouton_chinapon_pressed"]
-[connection signal="pressed" from="GroupePays/Dindia/BoutonDindia" to="GroupePays" method="_on_bouton_dindia_pressed"]
-[connection signal="pressed" from="GroupePays/Capistan/BoutonCapistan" to="GroupePays" method="_on_bouton_capistan_pressed"]
 [connection signal="pressed" from="GroupePays/Europea/BoutonEuropea" to="GroupePays" method="_on_bouton_europea_pressed"]
+[connection signal="countryClicked" from="GroupePays/Dindia" to="GroupePays" method="_on_country_clicked"]
+[connection signal="countryClicked" from="GroupePays/Capistan" to="GroupePays" method="_on_country_clicked"]
 [connection signal="mouse_entered" from="GroupArea/CanvasLayer/Area2D" to="GroupArea/CanvasLayer/Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="GroupArea/CanvasLayer/Area2D" to="GroupArea/CanvasLayer/Area2D" method="_on_mouse_exited"]
+
+[editable path="GroupePays/Dindia"]
+[editable path="GroupePays/Capistan"]
