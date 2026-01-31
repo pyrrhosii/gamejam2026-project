@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bylhk4b41b17d"]
 
 [ext_resource type="Texture2D" uid="uid://bgnh2oklp3flx" path="res://assets/cabinet.jpg" id="1_3gx4r"]
+[ext_resource type="Script" uid="uid://bnn4s2jqx8j27" path="res://scenes/buttonGlobe.gd" id="2_x50r7"]
 [ext_resource type="Texture2D" uid="uid://byofryw3mq6x6" path="res://assets/globe-ferme.png" id="2_y86kj"]
-[ext_resource type="Script" uid="uid://bg0sjaxqjalps" path="res://scenes/buttonGlobePantalone.gd" id="3_y86kj"]
 [ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="4_iflfj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qahmp"]
@@ -51,15 +51,14 @@ follow_viewport_enabled = true
 
 [node name="TextureButton" type="TextureButton" parent="dialogueBoxTableau" unique_id=1664826702]
 anchors_preset = -1
-anchor_left = 0.20700002
-anchor_top = 0.56100005
-anchor_right = 0.34100002
-anchor_bottom = 0.799
-offset_left = 16.559967
-offset_top = -21.880066
-offset_right = 0.27996826
-offset_bottom = 0.079956055
-script = ExtResource("3_y86kj")
+anchor_left = 0.365
+anchor_right = 0.47000003
+anchor_bottom = 0.231
+offset_left = -0.480011
+offset_top = 48.0
+offset_right = 0.5599365
+offset_bottom = 0.31199646
+script = ExtResource("2_x50r7")
 
 [node name="Panel" type="Panel" parent="dialogueBoxTableau" unique_id=1452424052]
 anchors_preset = -1
@@ -81,7 +80,7 @@ anchor_bottom = 1.0
 offset_right = -43.840088
 metadata/_edit_lock_ = true
 
-[node name="downText" type="Label" parent="dialogueBoxTableau/Panel/container" unique_id=1990448398]
+[node name="Label" type="Label" parent="dialogueBoxTableau/Panel/container" unique_id=813671938]
 layout_mode = 2
 text = "Je ne sais peut-être pas lire mais j’ai du doigté. Des années à jouer du clavecin, ça donne une sensibilité exacerbée. Il me semble que ce globe doit pouvoir s’ouvrir…"
 label_settings = SubResource("LabelSettings_tj2gu")
