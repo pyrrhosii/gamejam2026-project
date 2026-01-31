@@ -1,13 +1,19 @@
 [gd_scene format=3 uid="uid://tk2hpyngrorq"]
 
 [ext_resource type="Texture2D" uid="uid://bgnh2oklp3flx" path="res://assets/cabinet.jpg" id="1_qiyoi"]
+[ext_resource type="Texture2D" uid="uid://byofryw3mq6x6" path="res://assets/globe-ferme.png" id="2_milfc"]
 [ext_resource type="Script" uid="uid://bnn4s2jqx8j27" path="res://scenes/buttonGlobe.gd" id="2_qiyoi"]
+[ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="3_whpie"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6sfa"]
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_qiyoi"]
+font = ExtResource("3_whpie")
+font_size = 38
 
 [node name="Cabinet-arlequina" type="Node2D" unique_id=942869782]
 
@@ -30,26 +36,40 @@ grow_vertical = 2
 texture = ExtResource("1_qiyoi")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=457794409]
+
+[node name="GlobeFerme" type="Sprite2D" parent="CanvasLayer" unique_id=300909261]
+position = Vector2(535, 785)
+scale = Vector2(0.6866197, 0.60791767)
+texture = ExtResource("2_milfc")
 
 [node name="dialogueBoxTableau" type="CanvasLayer" parent="." unique_id=775718855]
 follow_viewport_enabled = true
 
 [node name="TextureButton" type="TextureButton" parent="dialogueBoxTableau" unique_id=1979717359]
 anchors_preset = -1
-anchor_left = 0.365
-anchor_right = 0.47000003
-anchor_bottom = 0.231
-offset_left = -0.480011
-offset_top = 48.0
-offset_right = 0.5599365
-offset_bottom = 0.31199646
+anchor_left = 0.20700002
+anchor_top = 0.56100005
+anchor_right = 0.34100002
+anchor_bottom = 0.799
+offset_left = 16.559967
+offset_top = -21.880066
+offset_right = 0.27996826
+offset_bottom = 0.079956055
 script = ExtResource("2_qiyoi")
 
 [node name="Panel" type="Panel" parent="dialogueBoxTableau" unique_id=1602997527]
-offset_left = 596.0
-offset_top = 51.0
-offset_right = 855.0
-offset_bottom = 183.0
+anchors_preset = -1
+anchor_left = 0.143
+anchor_top = 0.82500005
+anchor_right = 0.85700005
+anchor_bottom = 0.95500004
+offset_left = 0.44000244
+offset_top = -6.1035156e-05
+offset_right = -0.44006348
+offset_bottom = -0.4000244
 theme_override_styles/panel = SubResource("StyleBoxFlat_c6sfa")
 
 [node name="container" type="MarginContainer" parent="dialogueBoxTableau/Panel" unique_id=1448657170]
@@ -57,11 +77,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0320001
 anchor_bottom = 1.0
-offset_left = -66.0
-offset_top = -94.0
-offset_right = -61.93602
-offset_bottom = -94.0
+offset_right = -43.840088
 
 [node name="Label" type="Label" parent="dialogueBoxTableau/Panel/container" unique_id=813671938]
 layout_mode = 2
-text = "Ceci est un Tableau de maître"
+text = "Je ne sais peut-être pas lire mais j’ai du doigté. Des années à jouer du clavecin, ça donne une sensibilité exacerbée. Il me semble que ce globe doit pouvoir s’ouvrir…"
+label_settings = SubResource("LabelSettings_qiyoi")
+autowrap_mode = 2

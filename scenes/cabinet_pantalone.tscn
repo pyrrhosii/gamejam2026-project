@@ -57,10 +57,7 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0320001
 anchor_bottom = 1.0
-offset_left = -66.0
-offset_top = -94.0
-offset_right = -61.93602
-offset_bottom = -94.0
+offset_right = 4.063965
 
 [node name="Label" type="Label" parent="dialogueBoxTableau/Panel/container" unique_id=813671938]
 layout_mode = 2
