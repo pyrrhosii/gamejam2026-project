@@ -7,6 +7,7 @@ var arlequinaAdvance = {
 }
 
 func globeSuccess() -> void:
+	
 	arlequinaAdvance["globe"] = arlequinaAdvance["globe"]+1
 
 # Called when the node enters the scene tree for the first time.

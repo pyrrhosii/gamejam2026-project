@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bgnh2oklp3flx" path="res://assets/cabinet.jpg" id="1_qiyoi"]
 [ext_resource type="Texture2D" uid="uid://byofryw3mq6x6" path="res://assets/globe-ferme.png" id="2_milfc"]
-[ext_resource type="Script" uid="uid://bnn4s2jqx8j27" path="res://scenes/buttonGlobeArlequina.gd" id="2_qiyoi"]
+[ext_resource type="Script" path="res://scenes/buttonGlobeArlequina.gd" id="3_milfc"]
 [ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="3_whpie"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6sfa"]
@@ -60,7 +60,7 @@ offset_left = 16.559967
 offset_top = -21.880066
 offset_right = 0.27996826
 offset_bottom = 0.079956055
-script = ExtResource("2_qiyoi")
+script = ExtResource("3_milfc")
 
 [node name="Panel" type="Panel" parent="dialogueBoxTableau" unique_id=1602997527]
 anchors_preset = -1
