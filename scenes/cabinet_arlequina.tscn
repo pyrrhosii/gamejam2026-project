@@ -12,8 +12,10 @@ border_width_right = 2
 border_width_bottom = 2
 
 [sub_resource type="LabelSettings" id="LabelSettings_qiyoi"]
+paragraph_spacing = 3.0
 font = ExtResource("3_whpie")
 font_size = 38
+outline_size = 1
 
 [node name="Cabinet-arlequina" type="Node2D" unique_id=942869782]
 
@@ -78,9 +80,24 @@ anchors_preset = -1
 anchor_right = 1.0320001
 anchor_bottom = 1.0
 offset_right = -43.840088
+metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="dialogueBoxTableau/Panel/container" unique_id=813671938]
 layout_mode = 2
 text = "Je ne sais peut-être pas lire mais j’ai du doigté. Des années à jouer du clavecin, ça donne une sensibilité exacerbée. Il me semble que ce globe doit pouvoir s’ouvrir…"
 label_settings = SubResource("LabelSettings_qiyoi")
+vertical_alignment = 3
 autowrap_mode = 2
+
+[node name="globeZoomLayer" type="CanvasLayer" parent="." unique_id=228208494]
+
+[node name="globeZoomPanel" type="Panel" parent="globeZoomLayer" unique_id=1835381670]
+anchors_preset = -1
+anchor_left = 0.293
+anchor_top = 0.14400001
+anchor_right = 0.716
+anchor_bottom = 0.55300003
+offset_left = -36.559998
+offset_top = -0.5200043
+offset_right = -37.720093
+offset_bottom = -0.24005127
