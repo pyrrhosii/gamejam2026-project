@@ -36,9 +36,12 @@ Key properties:
 
 Example:
 
+````md
 Area2D
 |- Sprite2D
 |- CollisionPolygon2D
+````
+
 
 This hierarchy is the backbone of all Godot projects.
 
