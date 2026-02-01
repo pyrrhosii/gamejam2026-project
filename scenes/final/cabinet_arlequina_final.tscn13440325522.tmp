@@ -52,18 +52,18 @@ texture = ExtResource("5_kigct")
 polygon = PackedVector2Array(1396, 1076, 1433, 957, 1470, 834, 1469, 752, 1492, 717, 1509, 634, 1533, 522, 1646, 514, 1728, 437, 1788, 508, 1794, 601, 1825, 654, 1873, 742, 1916, 940, 1956, 1012, 1903, 1026, 1821, 1020, 1776, 1063, 1722, 1126, 1571, 1191, 1415, 1122, 1394, 1082)
 
 [node name="DialogueBrighella" parent="." unique_id=1731046195 instance=ExtResource("6_kigct")]
-offset_left = 323.0
-offset_top = 891.0
-offset_right = 323.0
-offset_bottom = 891.0
-parts = Array[String](["Salut collègue ! Il n’a pas l'air commode de ton patron. ", "Le mien aussi est bizarre :  le soir, il s'enferme dans le salon et demande à ce qu'on ne le dérange pas. ", "Mais moi je regarde par le trou de la serrure et je vois le vois tripoter le globe et en sortir quelque chose…"])
+offset_left = 243.0
+offset_top = 948.0
+offset_right = 243.0
+offset_bottom = 948.0
+parts = Array[String](["Bonjour Brighella ! ", "On va afficher ici le texte quand Arlequina va parler à Brighella.", "Il y a un nombre illimité de phrases que l'on peut mettre. ", "Mais une fois la dernière cliquées, ça s'arrête.", "Donc à la fin de celle-ci !"])
 
 [node name="DialogueCapitan" parent="." unique_id=245989897 instance=ExtResource("6_kigct")]
-offset_left = 560.0
-offset_top = 892.0
-offset_right = 560.0
-offset_bottom = 892.0
-parts = Array[String](["J'ai parcouru toutes les mers et continents du monde.", "Partant d'Europea, j'ai pris le thé avec le Sultan de Kaneborne.", "Reconnaissant en moi un habile stratège, il m'a confié son armée. ", "C'est à la tête de ces 30.000 hommes que j'ai traversé les contrées sauvages du Chinapon puis défait l'Empire Omottan.", "Là, j'ai libéré la province opprimée, désormais renommée Capistan en mon honneur. ", "Pour finir, nous avons vogué sur les côtes orageuses de Dindia avant de revenir dans notre paisible Europea."])
+offset_left = 565.0
+offset_top = 948.0
+offset_right = 565.0
+offset_bottom = 948.0
+parts = Array[String](["Capitan !", "Ici s'affiche le texte de dialogue entre Arlequina et le Capitaine", "il peut y avoi run nombre illimité de phrases", "Mais à la fin de la dernière le dialogue s'arrête", "ce sera le cas après cette phrase."])
 
 [connection signal="input_event" from="GlobeFerme" to="." method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Brighella" to="." method="_on_brighella_input_event"]
