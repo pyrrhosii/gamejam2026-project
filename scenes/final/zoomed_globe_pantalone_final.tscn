@@ -21,7 +21,7 @@ font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_qbm3l"]
 font = ExtResource("4_hogey")
-font_size = 33
+font_size = 31
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1py2"]
@@ -123,11 +123,11 @@ anchor_right = 1.001
 anchor_bottom = 0.93100005
 offset_left = 37.0
 offset_top = 12.0
-offset_right = -28.333008
+offset_right = 7.4989624
 offset_bottom = -3.9620056
 text = "Le globe s'ouvre !
 Une ridicule poupée !
-Le capitain en prend pour son panache"
+Le Capitaine en prend pour son panache"
 label_settings = SubResource("LabelSettings_qbm3l")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/PanelSuccess" unique_id=834285859]
