@@ -29,7 +29,7 @@ position = Vector2(535, 785)
 scale = Vector2(0.6866197, 0.60791767)
 polygon = PackedVector2Array(-10.194885, -370.11584, 106.31793, -325.70197, 182.05127, -233.58423, 256.32825, -179.30054, 291.28198, -123.37195, 262.1538, -57.573486, 260.6974, 19.739624, 270.89233, 126.66199, 263.61023, 194.10522, 190.78973, 208.90991, 139.81537, 268.12842, 155.83588, 335.57178, 129.62048, 383.27563, 69.907715, 370.11597, 48.061523, 314.18738, -1.4564209, 282.9331, -129.62048, 268.12842, -189.33331, 281.2881, -230.1128, 309.25244, -266.52307, 269.77344, -281.08716, 134.88672, -281.08716, -44.41382, -304.38974, -110.21228, -279.63077, -195.75012, -244.67694, -210.55481, -206.81024, -297.7376, -139.81537, -355.31122, -64.08203, -378.34064)
 
-[node name="DialogueRouge" parent="." unique_id=99581966 instance=ExtResource("4_8reo8")]
+[node name="DialoguesDynamiques" parent="." unique_id=99581966 instance=ExtResource("4_8reo8")]
 offset_left = 493.0
 offset_top = 949.0
 offset_right = 493.0
@@ -40,20 +40,8 @@ parts = Array[String](["Venise, 1687.", "Le Capitaine Rodomonte revient d’une 
 [node name="ButtonRouge" type="Button" parent="." unique_id=880366086]
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_top = -4.0
-offset_right = 247.0
-offset_bottom = 1084.0
+offset_right = 8.0
 grow_vertical = 2
-
-[node name="DialogueVert" parent="." unique_id=245989897 instance=ExtResource("4_8reo8")]
-parts = Array[String](["Marier sa fille est une gageure.", " Il faut dire que Colombine n’est pas coopérative… aucun des hommes que je lui ai présenté n’a trouvé grâce à ses yeux. Celui-ci n’a pas l’esprit assez fin, cela manque de bonnes manière… Cela suffit !", "Après des années de recherche d’un gendre idéal, il me semble enfin avoir trouvé un homme à la hauteur : le Capitaine Rodomonte. Cette fois-ci, ma tendre enfant n’aura pas son mot à dire. Mais il est un peu trop idéal… la dot sera fort chère et le mariage me coûtera un bras. sSi je pouvais trouver moyen de m’en tirer à peu de frais…", "Voilà, voilà une bonne idée… je dois lui trouver quelques défauts., Jje pourrais ainsi négocier la dot au rabais la dot de ma fille… ", "Lors de ma visite au palais, Jje prétendrais devoirvais prétendre me rendre aux lieux d’aisance et j’irai en doucepour aller fouiller dans son bureau.", "Catastrophe ! Ma douce Colombine va se marier ! Elle n’a d’amour que pour moi, et je n’ai d’amour que pour elle.", "Vous ai-je raconté la fois où j’ai, seul, défait une armée de 300 hommes ? Une victoire qui prouve ma vaillance au combat."])
-
-[node name="ButtonVert" type="Button" parent="." unique_id=1612197194]
-offset_left = 1682.0
-offset_top = 4.0
-offset_right = 1920.0
-offset_bottom = 1084.0
 
 [connection signal="input_event" from="GlobeFerme" to="." method="_on_area_2d_input_event"]
 [connection signal="pressed" from="ButtonRouge" to="." method="_on_button_rouge_pressed"]
-[connection signal="pressed" from="ButtonVert" to="." method="_on_button_vert_pressed"]

@@ -19,12 +19,19 @@ outline_size = 1
 
 [node name="ZonesCliquables" type="Node2D" unique_id=1143038283]
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1958426504]
+offset_left = -32.0
+offset_top = -37.0
+offset_right = 1964.0
+offset_bottom = 1127.0
+color = Color(0, 0, 0, 0.59607846)
+
 [node name="Background" type="CanvasLayer" parent="." unique_id=1728141960]
 follow_viewport_enabled = true
 
 [node name="Pays" type="Sprite2D" parent="Background" unique_id=1826797596]
-position = Vector2(968, 541)
-scale = Vector2(0.51708984, 0.51708984)
+position = Vector2(1133.8407, 435.75)
+scale = Vector2(0.41430667, 0.41430664)
 texture = ExtResource("1_x77u1")
 
 [node name="EmpireOmottan" type="CanvasLayer" parent="." unique_id=889544775]

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dpe50lrm88qwv"]
+
+[ext_resource type="Script" uid="uid://c3c6tpadgfgfd" path="res://scenes/dialogues/dialogues_script.gd" id="1_ntmgs"]
+
+[node name="DialoguesDynamiques" type="Control" unique_id=245989897]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ntmgs")
+parts = Array[String](["Texte1", "Texte2", "Toto", "C'est super", "Ca marche !!"])
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1804025285]
+layout_mode = 0
+offset_right = 999.0
+offset_bottom = 104.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer" unique_id=824652141]
+layout_mode = 2
+text = "salut biscuit j'en ai marre"
+scroll_active = false
+
+[node name="Button" type="Button" parent="PanelContainer" unique_id=1347748281]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "▼"
+
+[connection signal="pressed" from="PanelContainer/Button" to="." method="_on_button_pressed"]
