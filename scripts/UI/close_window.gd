@@ -7,4 +7,4 @@ func _ready():
 	pressed.connect(_on_close)
 
 func _on_close():
-	get_parent().get_parent().queue_free()  # Supprime le parent complètement
+	get_parent().get_parent().queue_free()	  # Supprime le parent complètement

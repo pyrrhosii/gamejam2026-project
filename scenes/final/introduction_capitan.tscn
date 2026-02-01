@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dkp8njfgh0wvk"]
+
+[ext_resource type="Texture2D" uid="uid://lfuk6lermcm3" path="res://assets/capitan.png" id="1_ltws8"]
+
+[node name="IntroductionCapitan" type="Node2D" unique_id=851590345]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1324452577]
+offset_right = 1944.0
+offset_bottom = 1112.0
+color = Color(0.8784314, 0.57254905, 0.43137255, 1)
+
+[node name="Capitan" type="Sprite2D" parent="." unique_id=1389933207]
+position = Vector2(1480, 560)
+scale = Vector2(0.5425209, 0.5425209)
+texture = ExtResource("1_ltws8")
