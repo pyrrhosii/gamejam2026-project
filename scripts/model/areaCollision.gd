@@ -54,7 +54,7 @@ func verifySequence(buttonName):
 		if etape_actuelle == 6:
 			$CanvasLayer/PanelSuccess.visible = true
 			await get_tree().create_timer(6.0).timeout
-			$CanvasLayer/PanelSuccess.visible = false
+			get_tree().change_scene_to_file("res://scenes/final/final_capitan_arlequina.tscn")
 			#texte.visible = true
 			#texte.text = "🎉 PARFAIT ! Tu as réussi !"
 			reset_sequence()

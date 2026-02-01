@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bx0vi5tdm1eqx"]
+
+[ext_resource type="Texture2D" uid="uid://cx1nt7swbnufk" path="res://assets/capitan_unmaksed.png" id="1_tlw6x"]
+
+[node name="IntroductionCapitan" type="Node2D" unique_id=851590345]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1324452577]
+offset_right = 1944.0
+offset_bottom = 1112.0
+color = Color(0.8784314, 0.57254905, 0.43137255, 1)
+metadata/_edit_lock_ = true
+
+[node name="Capitan" type="Sprite2D" parent="." unique_id=1389933207]
+position = Vector2(1480, 560)
+scale = Vector2(0.5425209, 0.5425209)
+texture = ExtResource("1_tlw6x")
+
+[node name="Label3" type="Label" parent="." unique_id=354647168]
+offset_left = 166.0
+offset_top = 168.0
+offset_right = 1120.0
+offset_bottom = 871.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 43
+text = "Ma poupée ? Qu’est-ce que…? Eumh, je veux dire… Ca doit appartenir à mon imbécile de Brighella, qui laisse traîner ses jeux puérils n'importe où. Mais soyons magnanimes, ne le mettons pas mal à l’aise et gardons ça secret.
+
+La Capitaine est démasqué ! Il est rouge de honte ! Jamais Pantalone ne voudra marier sa fille à un militaire qui joue en secret à la poupée le soir ! Colombine est sauvée !
+
+BRAVO !
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

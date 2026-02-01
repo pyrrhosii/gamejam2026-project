@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://2xeqrtpaw7d0"]
 
-[ext_resource type="Script" uid="uid://c3dki4yh2noeq" path="res://scripts/final/cabinet_arlequina_final.gd" id="1_4wxw6"]
+[ext_resource type="Script" uid="uid://b6pmffvv85vtb" path="res://scripts/final/cabinet_pantalone_final.gd" id="1_4wxw6"]
 [ext_resource type="Texture2D" uid="uid://bgnh2oklp3flx" path="res://assets/cabinet.jpg" id="2_swfar"]
 [ext_resource type="Texture2D" uid="uid://byofryw3mq6x6" path="res://assets/globe-ferme.png" id="3_km6wc"]
 [ext_resource type="Texture2D" uid="uid://bgsq1u7mscupq" path="res://assets/brighella.png" id="4_ik02y"]
@@ -56,14 +56,14 @@ offset_left = 323.0
 offset_top = 891.0
 offset_right = 323.0
 offset_bottom = 891.0
-parts = Array[String](["Messire, quel honneur de vous recevoir !", "Le Capitaine Pantalone est un excellent Maître.", "Il est bon, généreux, magnanime, beau, fort, glorieux,", "radieux, génial, cultivé, érudit, sublime, puissant,", "radieux, génial, cultivé, érudit, sublime, puissant,noble, digne, sage, énergique, viril… *il ne s'arrête pas*"])
+parts = Array[String](["Messire, quel honneur de vous recevoir !", "Le Capitaine Pantalone est un excellent Maître.", "Il est bon, généreux, magnanime, beau, fort, glorieux,", "radieux, génial, cultivé, érudit, sublime, puissant,", "noble, digne, sage, énergique, viril… *il ne s'arrête pas*"])
 
 [node name="DialogueCapitan" parent="." unique_id=245989897 instance=ExtResource("6_w2t1y")]
 offset_left = 560.0
 offset_top = 892.0
 offset_right = 560.0
 offset_bottom = 892.0
-parts = Array[String](["J'ai parcouru toutes les mers et continents du monde.", "Partant d'Europea, j'ai pris le thé avec le Sultan de Kaneborne.", "Reconnaissant en moi un habile stratège, il m'a confié son armée. ", "C'est à la tête de ces 30.000 hommes que j'ai traversé les contrées sauvages du Chinapon puis défait l'Empire Omottan.", "Là, j'ai libéré la province opprimée, désormais renommée Capistan en mon honneur. ", "Pour finir, nous avons vogué sur les côtes orageuses de Dindia avant de revenir dans notre paisible Europea."])
+parts = Array[String](["J'ai parcouru toutes les mers et continents du monde. J'ai pris le thé avec le Sultan de Kaneborne.", "Partant d'Europea, j'ai pris le thé avec le Sultan de Kaneborne.", "Reconnaissant en moi un habile stratège, il m'a confié son armée. ", "C'est à la tête de ces 30.000 hommes que j'ai traversé les contrées sauvages du Chinapon puis défait l'Empire Omottan.", "Là, j'ai libéré la province opprimée, désormais renommée Capistan en mon honneur. ", "Pour finir, nous avons vogué sur les côtes orageuses de Dindia avant de revenir dans notre paisible Europea."])
 
 [connection signal="input_event" from="GlobeFerme" to="." method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Brighella" to="." method="_on_brighella_input_event"]

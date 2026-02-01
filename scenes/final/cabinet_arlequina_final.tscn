@@ -63,7 +63,7 @@ offset_left = 560.0
 offset_top = 892.0
 offset_right = 560.0
 offset_bottom = 892.0
-parts = Array[String](["J'ai parcouru toutes les mers et continents du monde.", "Partant d'Europea, j'ai pris le thé avec le Sultan de Kaneborne.", "Reconnaissant en moi un habile stratège, il m'a confié son armée. ", "C'est à la tête de ces 30.000 hommes que j'ai traversé les contrées sauvages du Chinapon puis défait l'Empire Omottan.", "Là, j'ai libéré la province opprimée, désormais renommée Capistan en mon honneur. ", "Pour finir, nous avons vogué sur les côtes orageuses de Dindia avant de revenir dans notre paisible Europea."])
+parts = Array[String](["J'ai parcouru toutes les mers et continents du monde. J'ai pris le thé avec le Sultan de Kaneborne.", "Partant d'Europea, j'ai pris le thé avec le Sultan de Kaneborne.", "Reconnaissant en moi un habile stratège, il m'a confié son armée. ", "C'est à la tête de ces 30.000 hommes que j'ai traversé les contrées sauvages du Chinapon puis défait l'Empire Omottan.", "Là, j'ai libéré la province opprimée, désormais renommée Capistan en mon honneur. ", "Pour finir, nous avons vogué sur les côtes orageuses de Dindia avant de revenir dans notre paisible Europea."])
 
 [connection signal="input_event" from="GlobeFerme" to="." method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Brighella" to="." method="_on_brighella_input_event"]
