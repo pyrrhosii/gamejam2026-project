@@ -10,13 +10,22 @@ parts = Array[String](["Texte1", "Texte2", "Toto", "C'est super", "Ca marche !!"
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1804025285]
 layout_mode = 0
-offset_right = 999.0
-offset_bottom = 104.0
+offset_right = 911.0
+offset_bottom = 143.0
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer" unique_id=1031100109]
+layout_mode = 2
+color = Color(0.90810394, 0.6901106, 0.48980987, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer" unique_id=824652141]
 layout_mode = 2
-text = "salut biscuit j'en ai marre"
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Le texte varie en fonction des besoins."
 scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="PanelContainer" unique_id=1347748281]
 layout_mode = 2

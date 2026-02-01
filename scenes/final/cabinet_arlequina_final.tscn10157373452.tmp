@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bx7tahohjtkgu"]
+
+[ext_resource type="Script" uid="uid://c3dki4yh2noeq" path="res://scripts/final/cabinet_arlequina_final.gd" id="1_yuubv"]
+[ext_resource type="Texture2D" uid="uid://bgnh2oklp3flx" path="res://assets/cabinet.jpg" id="2_rfe12"]
+[ext_resource type="Texture2D" uid="uid://byofryw3mq6x6" path="res://assets/globe-ferme.png" id="3_vdrbd"]
+[ext_resource type="Texture2D" uid="uid://bgsq1u7mscupq" path="res://assets/brighella.png" id="4_cmvpf"]
+[ext_resource type="Texture2D" uid="uid://lfuk6lermcm3" path="res://assets/capitan.png" id="5_kigct"]
+
+[node name="Cabinet_Arlequina" type="Node2D" unique_id=942869782]
+script = ExtResource("1_yuubv")
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=545148551]
+z_index = -2
+position = Vector2(960.00006, 544)
+scale = Vector2(0.52734363, 0.5273437)
+texture = ExtResource("2_rfe12")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="GlobeFerme" type="Area2D" parent="." unique_id=398252623]
+
+[node name="GlobeFerme" type="Sprite2D" parent="GlobeFerme" unique_id=300909261]
+position = Vector2(535, 785)
+scale = Vector2(0.6866197, 0.60791767)
+texture = ExtResource("3_vdrbd")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GlobeFerme" unique_id=1267458501]
+position = Vector2(535, 785)
+scale = Vector2(0.6866197, 0.60791767)
+polygon = PackedVector2Array(-10.194885, -370.11584, 106.31793, -325.70197, 182.05127, -233.58423, 256.32825, -179.30054, 291.28198, -123.37195, 262.1538, -57.573486, 260.6974, 19.739624, 270.89233, 126.66199, 263.61023, 194.10522, 190.78973, 208.90991, 139.81537, 268.12842, 155.83588, 335.57178, 129.62048, 383.27563, 69.907715, 370.11597, 48.061523, 314.18738, -1.4564209, 282.9331, -129.62048, 268.12842, -189.33331, 281.2881, -230.1128, 309.25244, -266.52307, 269.77344, -281.08716, 134.88672, -281.08716, -44.41382, -304.38974, -110.21228, -279.63077, -195.75012, -244.67694, -210.55481, -206.81024, -297.7376, -139.81537, -355.31122, -64.08203, -378.34064)
+
+[node name="Brighella" type="Sprite2D" parent="." unique_id=1059947190]
+position = Vector2(201, 856.99994)
+scale = Vector2(0.4052056, 0.4052055)
+texture = ExtResource("4_cmvpf")
+
+[node name="Capitan" type="Sprite2D" parent="." unique_id=270140505]
+position = Vector2(1706, 811)
+scale = Vector2(0.39948744, 0.43155414)
+texture = ExtResource("5_kigct")
+
+[connection signal="input_event" from="GlobeFerme" to="." method="_on_area_2d_input_event"]
