@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://brdi1inbxdb0p"]
+
+[ext_resource type="Script" uid="uid://b5twugkkh7v0h" path="res://scripts/UI/start_script.gd" id="1_v1h5g"]
+[ext_resource type="Texture2D" uid="uid://7dj3iiq87n54" path="res://assets/start_menu.jpg" id="2_16k1a"]
+[ext_resource type="Texture2D" uid="uid://d0btgmh546w0h" path="res://assets/playButton.png" id="3_kywjj"]
+
+[node name="Node2D" type="Node2D" unique_id=2026485222]
+script = ExtResource("1_v1h5g")
+
+[node name="StartMenu" type="Sprite2D" parent="." unique_id=134074369]
+position = Vector2(960.5156, 608)
+scale = Vector2(0.59375006, 0.59375)
+texture = ExtResource("2_16k1a")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=809339415]
+
+[node name="PlayButton" type="Sprite2D" parent="Area2D" unique_id=2096492234]
+position = Vector2(928, 824)
+scale = Vector2(0.48067632, 0.48067632)
+texture = ExtResource("3_kywjj")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=162409193]
+polygon = PackedVector2Array(712, 816, 744, 768, 800, 744, 872, 736, 952, 728, 992, 728, 1040, 744, 1112, 768, 1144, 800, 1144, 848, 1056, 896, 968, 920, 816, 904, 760, 880)
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
