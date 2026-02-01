@@ -55,7 +55,6 @@ func verifySequence(buttonName):
 			$CanvasLayer/PanelSuccess.visible = true
 			await get_tree().create_timer(3.0).timeout
 			$CanvasLayer/PanelSuccess.visible = false
-			get_parent().get_parent().queue_free()
 			#texte.visible = true
 			#texte.text = "🎉 PARFAIT ! Tu as réussi !"
 			reset_sequence()
