@@ -53,7 +53,7 @@ func verifySequence(buttonName):
 		# SÉQUENCE COMPLÈTE !
 		if etape_actuelle == 3:
 			$CanvasLayer/PanelSuccess.visible = true
-			await get_tree().create_timer(3.0).timeout
+			await get_tree().create_timer(6.0).timeout
 			$CanvasLayer/PanelSuccess.visible = false
 			#texte.visible = true
 			#texte.text = "🎉 PARFAIT ! Tu as réussi !"
