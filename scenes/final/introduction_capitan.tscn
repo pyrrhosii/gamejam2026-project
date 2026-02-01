@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dkp8njfgh0wvk"]
 
 [ext_resource type="Texture2D" uid="uid://lfuk6lermcm3" path="res://assets/capitan.png" id="1_ltws8"]
+[ext_resource type="PackedScene" uid="uid://c8qiwd1gpn6ct" path="res://scenes/dialogues/dialogues_dynamiques_end_to_scene.tscn" id="2_ql147"]
 
 [node name="IntroductionCapitan" type="Node2D" unique_id=851590345]
 
@@ -8,8 +9,17 @@
 offset_right = 1944.0
 offset_bottom = 1112.0
 color = Color(0.8784314, 0.57254905, 0.43137255, 1)
+metadata/_edit_lock_ = true
 
 [node name="Capitan" type="Sprite2D" parent="." unique_id=1389933207]
 position = Vector2(1480, 560)
 scale = Vector2(0.5425209, 0.5425209)
 texture = ExtResource("1_ltws8")
+
+[node name="DialoguesDynamiques" parent="." unique_id=245989897 instance=ExtResource("2_ql147")]
+offset_left = 256.0
+offset_top = 320.0
+offset_right = 256.0
+offset_bottom = 320.0
+parts = Array[String](["Venise, 1687. Le Capitaine Rodomonte revient d’une longue campagne militaire aux Indes, auréolé de gloire et de fortune. Installé dans un palais luxueux au bord du Grand Canal, il cherche à prendre épouse.", "Pantalone, un vieux notable respectable, y voit enfin un parti idéal pour sa fille Colombine. Voilà un homme dont la renommée, le statut social et la puissance militaire garantira à la prunelle des ses yeux des tenues de soie, des bijoux de pierres fines et pourquoi pas… lui permettre à lui, Pantalone, de développer ses affaires aux Indes. ", " Il rêve déjà d'installer les premiers comptoirs vénitiens après avoir bouté dehors les rivaux portugais. Sous le commandement du Capitaine Rodomonte, l’armée du Doge pourra alors retrouver sa suprématie sur les routes commerciales et prendre la main sur le lucratif commerce des épices.", "Après une première rencontre dans la maison de maître de Pantalone il y a quelque jours, ce dernier se rend avec sa domestique, la jeune Arlequina, chez le capitaine Rodomonte pour conclure l’arrangement."])
+scene = "res://scenes/final/choix_personnage.tscn"

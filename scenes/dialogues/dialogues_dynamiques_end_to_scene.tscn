@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c8qiwd1gpn6ct"]
+
+[ext_resource type="Script" uid="uid://clwwd8c6rweqw" path="res://scenes/dialogues/dialogues_script_end_to_scene.gd" id="1_gm244"]
+[ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="2_gm244"]
+
+[node name="DialoguesDynamiques" type="Control" unique_id=245989897]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_gm244")
+parts = Array[String](["Texte1", "Texte2", "Toto", "C'est super", "Ca marche !!"])
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1804025285]
+layout_mode = 0
+offset_right = 832.0
+offset_bottom = 384.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer" unique_id=824652141]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_gm244")
+theme_override_font_sizes/normal_font_size = 33
+theme_override_font_sizes/bold_font_size = 33
+text = "lorem ipsum"
+scroll_active = false
+
+[node name="Button" type="Button" parent="PanelContainer" unique_id=1347748281]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "▼"
+
+[connection signal="pressed" from="PanelContainer/Button" to="." method="_on_button_pressed"]
