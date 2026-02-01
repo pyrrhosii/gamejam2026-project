@@ -61,6 +61,7 @@ texture = ExtResource("3_b6x0w")
 polygon = PackedVector2Array(545, 1, 585, -11, 607, 11, 611, 44, 598, 62, 566, 77, 541, 51)
 
 [node name="Sultanat" type="CanvasLayer" parent="AreaSultanat" unique_id=14013335]
+visible = false
 
 [node name="Panel" type="Panel" parent="AreaSultanat/Sultanat" unique_id=1831341927]
 layout_direction = 2
@@ -81,7 +82,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Label" type="Label" parent="AreaSultanat/Sultanat/Panel" unique_id=535854909]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.024443002
+anchor_left = -0.087625965
 anchor_top = 0.038970735
 anchor_right = 1.0244429
 anchor_bottom = 1.234766
@@ -156,6 +157,7 @@ position = Vector2(-2.500122, 12)
 polygon = PackedVector2Array(1003, 305, 1035, 291, 1039, 266, 1044, 247, 1037.4999, 223, 1020.4999, 216, 1014, 225, 1004.4999, 234, 984.4999, 231, 979, 288)
 
 [node name="Chinapon" type="CanvasLayer" parent="AreaChinapon" unique_id=125528938]
+visible = false
 
 [node name="Panel" type="Panel" parent="AreaChinapon/Chinapon" unique_id=1704168543]
 anchors_preset = -1
@@ -194,6 +196,7 @@ position = Vector2(12.499878, 6)
 polygon = PackedVector2Array(1116.4999, 314, 1132.4999, 299, 1162.4999, 304, 1183, 314, 1182.4999, 340, 1160.4999, 357, 1127.4999, 363, 1115, 346)
 
 [node name="Ottoman" type="CanvasLayer" parent="AreaOttoman" unique_id=180762983]
+visible = false
 
 [node name="Panel" type="Panel" parent="AreaOttoman/Ottoman" unique_id=1126892931]
 anchors_preset = -1
@@ -210,7 +213,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Label" type="Label" parent="AreaOttoman/Ottoman/Panel" unique_id=1373899685]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.104
+anchor_left = -0.07964592
 anchor_right = -0.525424
 offset_left = 16.0
 offset_top = 7.0
@@ -236,6 +239,7 @@ position = Vector2(-0.5001221, 1)
 polygon = PackedVector2Array(1381.4999, 535, 1425.4999, 534, 1434.4999, 501, 1423.4999, 467, 1395.4999, 464, 1377.4999, 479, 1370, 509)
 
 [node name="Capistan" type="CanvasLayer" parent="AreaCapistan" unique_id=153176684]
+visible = false
 
 [node name="Panel" type="Panel" parent="AreaCapistan/Capistan" unique_id=1885593044]
 anchors_preset = -1
@@ -265,6 +269,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="AreaDindia" type="Area2D" parent="." unique_id=1698073224]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="AreaDindia" unique_id=1667477861]
 modulate = Color(0, 0, 0, 1)
@@ -277,6 +282,7 @@ texture = ExtResource("3_b6x0w")
 polygon = PackedVector2Array(978.4999, 486, 965.4999, 430, 997.4999, 418, 1043.4999, 441, 1024.4999, 487)
 
 [node name="Dindia" type="CanvasLayer" parent="AreaDindia" unique_id=1862603808]
+visible = false
 
 [node name="Panel" type="Panel" parent="AreaDindia/Dindia" unique_id=2034746689]
 anchors_preset = -1
@@ -292,7 +298,8 @@ metadata/_edit_use_anchors_ = true
 [node name="Label" type="Label" parent="AreaDindia/Dindia/Panel" unique_id=1277923580]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = -0.420765
+anchor_left = -0.04032255
+anchor_right = -0.42076504
 offset_left = 10.0
 offset_top = 7.0
 offset_right = 169.0
@@ -304,6 +311,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="AreaEuropea" type="Area2D" parent="." unique_id=764626801]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="AreaEuropea" unique_id=1014846209]
 modulate = Color(0, 0, 0, 1)
@@ -317,6 +325,7 @@ position = Vector2(27.499878, 0)
 polygon = PackedVector2Array(810, 587, 757.4999, 616, 761.4999, 642, 783, 672, 824, 680, 853.4999, 631)
 
 [node name="Europea" type="CanvasLayer" parent="AreaEuropea" unique_id=344135927]
+visible = false
 
 [node name="Panel" type="Panel" parent="AreaEuropea/Europea" unique_id=1992033437]
 anchors_preset = -1
@@ -332,7 +341,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Label" type="Label" parent="AreaEuropea/Europea/Panel" unique_id=751615078]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.033333335
+anchor_left = -0.025
 anchor_right = -0.46666667
 offset_left = 10.0
 offset_top = 7.0
