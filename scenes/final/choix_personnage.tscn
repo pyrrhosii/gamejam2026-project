@@ -2,65 +2,63 @@
 
 [ext_resource type="Script" uid="uid://bmkyc2dh5y8yi" path="res://scripts/final/choix_personnage.gd" id="1_0mnt2"]
 [ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="1_b6uek"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_10t5j"]
-font = ExtResource("1_b6uek")
-font_size = 44
-font_color = Color(0, 0, 0, 1)
+[ext_resource type="Texture2D" uid="uid://cah0roqjfst01" path="res://assets/start_menu_free.png" id="2_smpio"]
+[ext_resource type="Texture2D" uid="uid://blgnl2bpu40la" path="res://assets/masque.png" id="3_10t5j"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_smpio"]
 font = ExtResource("1_b6uek")
-font_size = 44
+font_size = 55
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_msfd3"]
+font = ExtResource("1_b6uek")
+font_size = 55
 font_color = Color(0, 0, 0, 1)
 
 [node name="ChoixPersonnage" type="Node2D" unique_id=1266763283]
 script = ExtResource("1_0mnt2")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=129838645]
-offset_right = 1944.0
-offset_bottom = 1112.0
-color = Color(0.8784314, 0.57254905, 0.43137255, 1)
-metadata/_edit_lock_ = true
+[node name="StartMenuFree" type="Sprite2D" parent="." unique_id=1129958847]
+position = Vector2(1217, 783)
+texture = ExtResource("2_smpio")
+
+[node name="Label" type="Label" parent="." unique_id=1405557383]
+offset_left = 312.0
+offset_top = 857.0
+offset_right = 650.0
+offset_bottom = 993.0
+text = "Je suis pantalone"
+label_settings = SubResource("LabelSettings_smpio")
+
+[node name="Label2" type="Label" parent="." unique_id=358992622]
+offset_left = 1303.0
+offset_top = 864.0
+offset_right = 1656.0
+offset_bottom = 926.0
+text = "Je suis Arlequina"
+label_settings = SubResource("LabelSettings_msfd3")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1742181998]
 position = Vector2(-196, 44)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=893541585]
+polygon = PackedVector2Array(516, 415, 662, 370, 786, 390, 836, 533, 855, 677, 792, 760, 496, 771, 466, 544)
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1779536699]
-
-[node name="Label" type="Label" parent="Area2D/Sprite2D" unique_id=1606898766]
-anchors_preset = -1
-anchor_left = 484.38202
-anchor_top = 918.00006
-anchor_right = 787.00006
-anchor_bottom = 974.00006
-offset_left = 27.617981
-offset_top = -6.1035156e-05
-offset_right = -6.1035156e-05
-offset_bottom = -6.1035156e-05
-text = "Je suis Pantalone"
-label_settings = SubResource("LabelSettings_10t5j")
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=784489839]
+position = Vector2(659, 557)
+scale = Vector2(0.6873112, 0.6873112)
+texture = ExtResource("3_10t5j")
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=1703541830]
 position = Vector2(50, 122)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D2" unique_id=1160769036]
+polygon = PackedVector2Array(1256, 621, 1206, 430, 1314, 292, 1554, 317, 1609, 428, 1601, 665, 1443, 712, 1286, 693)
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D2" unique_id=556496160]
-
-[node name="Label" type="Label" parent="Area2D2/Sprite2D" unique_id=1462306622]
-anchors_preset = -1
-anchor_left = 1360.0001
-anchor_top = 848.00006
-anchor_right = 1640.0001
-anchor_bottom = 872.00006
-offset_left = 7.999878
-offset_top = -16.000061
-offset_right = 2.999878
-offset_bottom = 15.999939
-text = "Je suis Arlequine"
-label_settings = SubResource("LabelSettings_smpio")
+[node name="Sprite2D" type="Sprite2D" parent="Area2D2" unique_id=28305728]
+position = Vector2(1408, 484.99997)
+scale = Vector2(0.6790031, 0.6790031)
+texture = ExtResource("3_10t5j")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Area2D2" to="." method="_on_area_2d_2_input_event"]
