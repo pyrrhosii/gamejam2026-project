@@ -8,43 +8,38 @@ var etape_actuelle = 0    # Combien de clics corrects
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
+	
+func showAndHide(panel: Panel, landName: String) -> void:
+	print("On clique sur une marque", landName)
+	panel.visible = true
+	verifySequence(landName)
+	await get_tree().create_timer(1.0).timeout
+	panel.visible = false
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_MASK_LEFT and event.is_pressed():
-		print("On clique sur une marque", shape_idx)
-		$AreaSultanat/Sultanat/Panel.visible = !$AreaSultanat/Sultanat/Panel.visible
-		verifySequence("Sultanat")
+		showAndHide($AreaSultanat/Sultanat/Panel, "Sultanat" )
 
 func _on_area_2d_2_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_MASK_LEFT and event.is_pressed():
-		print("On clique sur une marque", shape_idx)
-		$AreaChinapon/Chinapon/Panel.visible = !$AreaChinapon/Chinapon/Panel.visible
-		verifySequence("Chinapon")
+		showAndHide($AreaChinapon/Chinapon/Panel, "Chinapon" )
 
 func _on_area_2d_3_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_MASK_LEFT and event.is_pressed():
-		print("On clique sur une marque", shape_idx)
-		$AreaOttoman/Ottoman/Panel.visible = !$AreaOttoman/Ottoman/Panel.visible
-		verifySequence("Ottoman")
+		showAndHide($AreaOttoman/Ottoman/Panel, "Ottoman" )
 
 func _on_area_capistan_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_MASK_LEFT and event.is_pressed():
-		print("On clique sur une marque", shape_idx)
-		$AreaCapistan/Capistan/Panel.visible = !$AreaCapistan/Capistan/Panel.visible
-		verifySequence("Capistan")
+		showAndHide($AreaCapistan/Capistan/Panel, "Capistan" )
 
 func _on_area_dindia_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_MASK_LEFT and event.is_pressed():
-		print("On clique sur une marque", shape_idx)
-		$AreaDindia/Dindia/Panel.visible = !$AreaDindia/Dindia/Panel.visible
-		verifySequence("Dindia")
+		showAndHide($AreaDindia/Dindia/Panel, "Dindia" )
 
 func _on_area_europea_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_MASK_LEFT and event.is_pressed():
-		print("On clique sur une marque", shape_idx)
-		$AreaEuropea/Europea/Panel.visible = !$AreaEuropea/Europea/Panel.visible
-		verifySequence("Europea")
-
+		showAndHide($AreaEuropea/Europea/Panel, "Europea" )
+		
 func verifySequence(buttonName):
 	# Ajoute le clic du joueur
 	sequence_joueur.append(buttonName)
@@ -57,6 +52,10 @@ func verifySequence(buttonName):
 		
 		# SÉQUENCE COMPLÈTE !
 		if etape_actuelle == 3:
+			$CanvasLayer/PanelSuccess.visible = true
+			await get_tree().create_timer(3.0).timeout
+			$CanvasLayer/PanelSuccess.visible = false
+			get_parent().get_parent().queue_free()
 			#texte.visible = true
 			#texte.text = "🎉 PARFAIT ! Tu as réussi !"
 			reset_sequence()
