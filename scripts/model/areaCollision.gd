@@ -1,6 +1,6 @@
 extends Node2D
 
-var sequence_correcte = ["Ottoman", "Chinapon", "Dindia"]
+var sequence_correcte = ["Sultanat", "Chinapon", "Ottoman","Capistan","Dindia","Europea"]
 var sequence_joueur = []  # Ce que le joueur clique
 var etape_actuelle = 0    # Combien de clics corrects
 
@@ -48,10 +48,10 @@ func verifySequence(buttonName):
 	if buttonName == sequence_correcte[etape_actuelle]:
 		etape_actuelle += 1
 		#texte.text = "✅ BON ! Étape " + str(etape_actuelle) + "/3"
-		print("✅ BON ! Étape " + str(etape_actuelle) + "/3")
+		print("✅ BON ! Étape " + str(etape_actuelle) + "/5")
 		
 		# SÉQUENCE COMPLÈTE !
-		if etape_actuelle == 3:
+		if etape_actuelle == 6:
 			$CanvasLayer/PanelSuccess.visible = true
 			await get_tree().create_timer(6.0).timeout
 			$CanvasLayer/PanelSuccess.visible = false

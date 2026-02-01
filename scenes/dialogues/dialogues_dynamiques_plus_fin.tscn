@@ -1,30 +1,31 @@
-[gd_scene format=3 uid="uid://c8qiwd1gpn6ct"]
+[gd_scene format=3 uid="uid://ea6awkp7cmn3"]
 
-[ext_resource type="Script" uid="uid://clwwd8c6rweqw" path="res://scenes/dialogues/dialogues_script_end_to_scene.gd" id="1_gm244"]
-[ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="2_gm244"]
+[ext_resource type="Script" uid="uid://cyogofdm4p6wm" path="res://scenes/dialogues/dialogues_script_plus_fin.gd" id="1_rrble"]
 
 [node name="DialoguesDynamiques" type="Control" unique_id=245989897]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_gm244")
+script = ExtResource("1_rrble")
 parts = Array[String](["Texte1", "Texte2", "Toto", "C'est super", "Ca marche !!"])
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1804025285]
 layout_mode = 0
-offset_right = 832.0
-offset_bottom = 576.0
+offset_right = 911.0
+offset_bottom = 143.0
 
-[node name="ColorRect" type="ColorRect" parent="PanelContainer" unique_id=1536594807]
+[node name="ColorRect" type="ColorRect" parent="PanelContainer" unique_id=1031100109]
 layout_mode = 2
-color = Color(0.8784314, 0.57254905, 0.43137255, 1)
+color = Color(0.90810394, 0.6901106, 0.48980987, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer" unique_id=824652141]
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("2_gm244")
-theme_override_font_sizes/normal_font_size = 33
-theme_override_font_sizes/bold_font_size = 33
-text = "lorem ipsum"
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Le texte varie en fonction des besoins."
 scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="PanelContainer" unique_id=1347748281]
 layout_mode = 2

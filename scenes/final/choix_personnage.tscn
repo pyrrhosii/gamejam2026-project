@@ -4,6 +4,8 @@
 [ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="1_b6uek"]
 [ext_resource type="Texture2D" uid="uid://cah0roqjfst01" path="res://assets/start_menu_free.png" id="2_smpio"]
 [ext_resource type="Texture2D" uid="uid://blgnl2bpu40la" path="res://assets/masque.png" id="3_10t5j"]
+[ext_resource type="Texture2D" uid="uid://dumbb0wybc51d" path="res://assets/masque_arlequina.png" id="5_msfd3"]
+[ext_resource type="PackedScene" uid="uid://c8qiwd1gpn6ct" path="res://scenes/dialogues/dialogues_dynamiques_end_to_scene.tscn" id="6_uyy40"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_smpio"]
 font = ExtResource("1_b6uek")
@@ -27,7 +29,7 @@ offset_left = 312.0
 offset_top = 857.0
 offset_right = 650.0
 offset_bottom = 993.0
-text = "Je suis pantalone"
+text = "Je suis Pantalone"
 label_settings = SubResource("LabelSettings_smpio")
 
 [node name="Label2" type="Label" parent="." unique_id=358992622]
@@ -56,9 +58,39 @@ position = Vector2(50, 122)
 polygon = PackedVector2Array(1256, 621, 1206, 430, 1314, 292, 1554, 317, 1609, 428, 1601, 665, 1443, 712, 1286, 693)
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D2" unique_id=28305728]
-position = Vector2(1408, 484.99997)
-scale = Vector2(0.6790031, 0.6790031)
-texture = ExtResource("3_10t5j")
+position = Vector2(1427, 511.99997)
+scale = Vector2(0.45863965, 0.45863962)
+texture = ExtResource("5_msfd3")
+
+[node name="Pantalone" parent="." unique_id=245989897 instance=ExtResource("6_uyy40")]
+visible = false
+offset_left = 953.0
+offset_top = 359.0
+offset_right = 953.0
+offset_bottom = 359.0
+parts = Array[String](["Marier sa fille est une gageure. Il faut dire que Colombine n’est pas coopérative… aucun des hommes que je lui ai présenté n’a trouvé grâce à ses yeux. Celui-ci n’a pas l’esprit assez fin, celui-là manque de bonnes manières… Cela suffit !Après des années de recherche d’un gendre idéal, il me semble enfin avoir trouvé un homme à la hauteur : le Capitaine Rodomonte. Cette fois-ci, ma tendre enfant n’aura pas son mot à dire. Mais le bougre est un peu trop idéal… la dot sera fort chère et le mariage me coûtera un bras. Si je pouvais trouver moyen de m’en tirer à peu de frais…Voilà ! Voilà une bonne idée ! Je dois lui trouver quelques défauts, je pourrais ainsi négocier la dot au rabais.Lors de ma visite au palais, je prétendrai devoir me rendre aux lieux d’aisance et j’irai en douce fouiller dans son bureau."])
+scene = "res://scenes/final/cabinet_pantalone_final.tscn"
+
+[node name="Arlequina" parent="." unique_id=57587069 instance=ExtResource("6_uyy40")]
+visible = false
+offset_left = 83.0
+offset_top = 359.0
+offset_right = 83.0
+offset_bottom = 359.0
+parts = Array[String](["Catastrophe ! Ma douce Colombine va se marier ! Elle n’a d’amour que pour moi, et je n’ai d’amour que pour elle. Jusqu’ici nous avons toujours réussi à éviter les unions que ce vieillard aigri de Pantalone voulaient lui imposer. Nous n’aspirons qu’à une chose désormais : fuir Venise et jouir des plaisirs que la vie nous offre. Les fruits dans le verger, la source pure de la montagne, le feu qui crépite dans la cabane de torchis, seront de nature à protéger notre amour. Mais le temps presse…Je dois absolument empêcher ce mariage ! Si je pouvais le ridiculiser au yeux de mon maître avant que l’accord ne soit passé…! Je vais profiter de la visite que Pantalone doit rendre au Capitaine Rodomonte pour l’accompagner. Je trouverai bien un moyen de le convaincre d’ aller fouiner en douce dans le bureau du militaire… Marier la prunelle de ses yeux mérite bien de s’assurer que le parti qu’il lui réserve est fiable et prestigieux."])
+scene = "res://scenes/final/cabinet_arlequina_final.tscn"
+
+[node name="Label3" type="Label" parent="." unique_id=1798571968]
+offset_left = 324.0
+offset_top = 107.0
+offset_right = 1610.0
+offset_bottom = 337.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 43
+text = "Cliquez sur le personnage de votre choix pour commencer ! Attention votre partenaire doit cliquer sur le second !"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Area2D2" to="." method="_on_area_2d_2_input_event"]

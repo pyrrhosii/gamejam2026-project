@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cp6faf8nftiiq"]
+
+[ext_resource type="Texture2D" uid="uid://cah0roqjfst01" path="res://assets/start_menu_free.png" id="1_044c8"]
+
+[node name="Final" type="Node2D" unique_id=2040561375]
+position = Vector2(150, 122)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1487577217]
+position = Vector2(802, 387)
+texture = ExtResource("1_044c8")
+
+[node name="Label" type="Label" parent="." unique_id=1774051540]
+offset_right = 40.0
+offset_bottom = 23.0
