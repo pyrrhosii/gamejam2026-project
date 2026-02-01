@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://d2ltmrb6ftq8w"]
+[gd_scene format=3 uid="uid://dvf1rjtyftqcg"]
 
-[ext_resource type="Script" uid="uid://blqkvesuwj31c" path="res://scripts/model/areaCollision.gd" id="1_3o4xb"]
-[ext_resource type="Texture2D" uid="uid://iw1xghepie3s" path="res://assets/map.jpg" id="2_wejy3"]
-[ext_resource type="Texture2D" uid="uid://bmryapkgciecg" path="res://assets/fingerprint.png" id="3_od53w"]
-[ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="4_6u1tx"]
-[ext_resource type="Script" uid="uid://cgh5j74gv16oq" path="res://scripts/UI/close_window.gd" id="5_xqs0q"]
+[ext_resource type="Script" uid="uid://blqkvesuwj31c" path="res://scripts/model/areaCollision.gd" id="1_pvi2f"]
+[ext_resource type="Texture2D" uid="uid://iw1xghepie3s" path="res://assets/map.jpg" id="2_jmn81"]
+[ext_resource type="Texture2D" uid="uid://bmryapkgciecg" path="res://assets/fingerprint.png" id="3_b6x0w"]
+[ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="4_hogey"]
+[ext_resource type="Script" uid="uid://cgh5j74gv16oq" path="res://scripts/UI/close_window.gd" id="5_sooge"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4yoag"]
 border_width_left = 2
@@ -13,7 +13,7 @@ border_width_right = 2
 border_width_bottom = 2
 
 [sub_resource type="LabelSettings" id="LabelSettings_j1py2"]
-font = ExtResource("4_6u1tx")
+font = ExtResource("4_hogey")
 font_size = 33
 font_color = Color(0, 0, 0, 1)
 
@@ -25,18 +25,18 @@ border_width_bottom = 2
 border_color = Color(1, 1, 1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_i8h24"]
-font = ExtResource("4_6u1tx")
+font = ExtResource("4_hogey")
 font_size = 33
 font_color = Color(0, 0, 0, 1)
 
 [node name="zoomed_globe_arlequina" type="Node2D" unique_id=1143038283]
 position = Vector2(3.500122, -4)
-script = ExtResource("1_3o4xb")
+script = ExtResource("1_pvi2f")
 
 [node name="Pays" type="Sprite2D" parent="." unique_id=1826797596]
 position = Vector2(1014.4999, 398)
 scale = Vector2(0.3351368, 0.33326882)
-texture = ExtResource("2_wejy3")
+texture = ExtResource("2_jmn81")
 metadata/_edit_lock_ = true
 
 [node name="AreaSultanat" type="Area2D" parent="." unique_id=349885185]
@@ -47,7 +47,7 @@ modulate = Color(0, 0, 0, 1)
 position = Vector2(572, 30.999996)
 rotation = 0.29586083
 scale = Vector2(0.4523099, 0.47540313)
-texture = ExtResource("3_od53w")
+texture = ExtResource("3_b6x0w")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaSultanat" unique_id=977051886]
 polygon = PackedVector2Array(545, 1, 589, 1, 607, 11, 607, 42, 589, 55, 554, 53)
@@ -55,6 +55,7 @@ polygon = PackedVector2Array(545, 1, 589, 1, 607, 11, 607, 42, 589, 55, 554, 53)
 [node name="Sultanat" type="CanvasLayer" parent="AreaSultanat" unique_id=14013335]
 
 [node name="Panel" type="Panel" parent="AreaSultanat/Sultanat" unique_id=1831341927]
+visible = false
 layout_direction = 2
 anchors_preset = -1
 anchor_left = 0.14299999
@@ -99,7 +100,7 @@ offset_top = 5.959999
 offset_right = -6.2800293
 offset_bottom = 5.6399918
 text = "X"
-script = ExtResource("5_xqs0q")
+script = ExtResource("5_sooge")
 metadata/_edit_use_anchors_ = true
 
 [node name="AreaChinapon" type="Area2D" parent="." unique_id=1112106020]
@@ -109,7 +110,7 @@ modulate = Color(0, 0, 0, 1)
 position = Vector2(1006.4999, 280)
 rotation = 0.29586083
 scale = Vector2(0.4523099, 0.47540313)
-texture = ExtResource("3_od53w")
+texture = ExtResource("3_b6x0w")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaChinapon" unique_id=1346218072]
 polygon = PackedVector2Array(1003.4999, 294, 1021.4999, 288, 1033.4999, 271, 1035.4999, 253, 1037.4999, 223, 1020.4999, 216, 1021.4999, 236, 1004.4999, 234, 984.4999, 231)
@@ -117,6 +118,7 @@ polygon = PackedVector2Array(1003.4999, 294, 1021.4999, 288, 1033.4999, 271, 103
 [node name="Chinapon" type="CanvasLayer" parent="AreaChinapon" unique_id=125528938]
 
 [node name="Panel" type="Panel" parent="AreaChinapon/Chinapon" unique_id=1704168543]
+visible = false
 anchors_preset = -1
 anchor_right = 0.095000006
 anchor_bottom = 0.049000002
@@ -143,7 +145,7 @@ modulate = Color(0, 0, 0, 1)
 position = Vector2(1157.4999, 339.99997)
 rotation = 0.44939697
 scale = Vector2(0.45970833, 0.4419411)
-texture = ExtResource("3_od53w")
+texture = ExtResource("3_b6x0w")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaOttoman" unique_id=189583600]
 polygon = PackedVector2Array(1116.4999, 314, 1132.4999, 299, 1162.4999, 304, 1182.4999, 340, 1160.4999, 357, 1127.4999, 363)
@@ -151,6 +153,7 @@ polygon = PackedVector2Array(1116.4999, 314, 1132.4999, 299, 1162.4999, 304, 118
 [node name="Ottoman" type="CanvasLayer" parent="AreaOttoman" unique_id=180762983]
 
 [node name="Panel" type="Panel" parent="AreaOttoman/Ottoman" unique_id=1126892931]
+visible = false
 anchors_preset = -1
 anchor_right = 0.095000006
 anchor_bottom = 0.049000002
@@ -178,7 +181,7 @@ modulate = Color(0, 0, 0, 1)
 position = Vector2(1404.5, 500)
 rotation = 0.29586083
 scale = Vector2(0.4523099, 0.47540313)
-texture = ExtResource("3_od53w")
+texture = ExtResource("3_b6x0w")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaCapistan" unique_id=1633425045]
 polygon = PackedVector2Array(1386.4999, 524, 1416.4999, 524, 1426.4999, 504, 1422.4999, 471, 1406.4999, 472, 1377.4999, 479)
@@ -186,6 +189,7 @@ polygon = PackedVector2Array(1386.4999, 524, 1416.4999, 524, 1426.4999, 504, 142
 [node name="Capistan" type="CanvasLayer" parent="AreaCapistan" unique_id=153176684]
 
 [node name="Panel" type="Panel" parent="AreaCapistan/Capistan" unique_id=1885593044]
+visible = false
 anchors_preset = -1
 anchor_right = 0.095000006
 anchor_bottom = 0.049000002
@@ -213,7 +217,7 @@ modulate = Color(0, 0, 0, 1)
 position = Vector2(1000.4999, 454.99997)
 rotation = 0.44939697
 scale = Vector2(0.45970833, 0.4419411)
-texture = ExtResource("3_od53w")
+texture = ExtResource("3_b6x0w")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaDindia" unique_id=340542238]
 polygon = PackedVector2Array(972.4999, 477, 965.4999, 430, 997.4999, 418, 1043.4999, 441, 1026.4999, 480)
@@ -221,6 +225,7 @@ polygon = PackedVector2Array(972.4999, 477, 965.4999, 430, 997.4999, 418, 1043.4
 [node name="Dindia" type="CanvasLayer" parent="AreaDindia" unique_id=1862603808]
 
 [node name="Panel" type="Panel" parent="AreaDindia/Dindia" unique_id=2034746689]
+visible = false
 anchors_preset = -1
 anchor_right = 0.095000006
 anchor_bottom = 0.049000002
@@ -248,7 +253,7 @@ modulate = Color(0, 0, 0, 1)
 position = Vector2(827.49994, 634)
 rotation = 0.29586083
 scale = Vector2(0.4523099, 0.47540313)
-texture = ExtResource("3_od53w")
+texture = ExtResource("3_b6x0w")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaEuropea" unique_id=1837455230]
 position = Vector2(22.499878, 0)
@@ -257,6 +262,7 @@ polygon = PackedVector2Array(813.4999, 606, 757.4999, 616, 761.4999, 642, 778.49
 [node name="Europea" type="CanvasLayer" parent="AreaEuropea" unique_id=344135927]
 
 [node name="Panel" type="Panel" parent="AreaEuropea/Europea" unique_id=1992033437]
+visible = false
 anchors_preset = -1
 anchor_right = 0.095000006
 anchor_bottom = 0.049000002
