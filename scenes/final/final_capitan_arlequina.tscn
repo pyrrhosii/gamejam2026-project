@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bgs106x75c5q5"]
 
 [ext_resource type="Texture2D" uid="uid://cx1nt7swbnufk" path="res://assets/capitan_unmaksed.png" id="1_dp3wo"]
+[ext_resource type="FontFile" uid="uid://dlm5fr77oy138" path="res://assets/fonts/Ancient Medium.ttf" id="2_b8bg8"]
 
 [node name="IntroductionCapitan" type="Node2D" unique_id=851590345]
 
@@ -20,8 +21,10 @@ offset_left = 162.0
 offset_right = 1116.0
 offset_bottom = 1051.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_b8bg8")
 theme_override_font_sizes/font_size = 40
 text = "Ma poupée ? Qu’est-ce que…? Eumh, je veux dire… Ca doit appartenir à mon imbécile de Brighella, qui laisse traîner ses jeux puérils n'importe où. Mais soyons magnanimes, ne le mettons pas mal à l’aise et gardons ça secret.
+
 
 Ce militaire viril joue donc en secret à la poupée ! C’est parfait ! Je garderai ce sombre secret à condition qu’il accepte une dot ridicule pour marier ma fille. Non, c’est même lui qui me versera une dot ! Et s’il refuse, tout Venise rira de la petite occupation honteuse du Capitaine Rodomote !
 

@@ -1,4 +1,4 @@
-﻿# Godot – Core Concepts (1–6)
+# Godot – Core Concepts (1–6)
 
 This document summarizes the fundamental concepts Godot is built on.
 Understanding these removes most beginner friction and clarifies how to structure games correctly.

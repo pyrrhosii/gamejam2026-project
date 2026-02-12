@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cqhdwt2fywoi6"]
 
-[ext_resource type="Script" path="res://scenes/dialogues/dialogues_script_end_to_scene.gd" id="1_gm244"]
+[ext_resource type="Script" uid="uid://clwwd8c6rweqw" path="res://scenes/dialogues/dialogues_script_end_to_scene.gd" id="1_gm244"]
+[ext_resource type="FontFile" uid="uid://dlm5fr77oy138" path="res://assets/fonts/Ancient Medium.ttf" id="2_gm244"]
 
 [node name="DialoguesDynamiques" type="Control" unique_id=245989897]
 layout_mode = 3
@@ -20,6 +21,7 @@ color = Color(0.8784314, 0.57254905, 0.43137255, 1)
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer" unique_id=824652141]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_gm244")
 theme_override_font_sizes/normal_font_size = 33
 theme_override_font_sizes/bold_font_size = 33
 text = "lorem ipsum"

@@ -20,7 +20,7 @@ metadata/_edit_lock_ = true
 
 [node name="GlobeFerme" type="Area2D" parent="." unique_id=398252623]
 
-[node name="GlobeFerme" type="Sprite2D" parent="GlobeFerme" unique_id=300909261]
+[node name="Sprite2D" type="Sprite2D" parent="GlobeFerme" unique_id=300909261]
 position = Vector2(535, 785)
 scale = Vector2(0.6866197, 0.60791767)
 texture = ExtResource("3_km6wc")
@@ -32,7 +32,7 @@ polygon = PackedVector2Array(-10.194885, -370.11584, 106.31793, -325.70197, 182.
 
 [node name="Brighella" type="Area2D" parent="." unique_id=869785029]
 
-[node name="Brighella" type="Sprite2D" parent="Brighella" unique_id=1059947190]
+[node name="Sprite2D" type="Sprite2D" parent="Brighella" unique_id=1059947190]
 position = Vector2(201, 856.99994)
 scale = Vector2(0.4052056, 0.4052055)
 texture = ExtResource("4_ik02y")
@@ -43,7 +43,7 @@ metadata/_edit_lock_ = true
 
 [node name="Capitan" type="Area2D" parent="." unique_id=1759090547]
 
-[node name="Capitan" type="Sprite2D" parent="Capitan" unique_id=270140505]
+[node name="Sprite2D" type="Sprite2D" parent="Capitan" unique_id=270140505]
 position = Vector2(1681, 803)
 scale = Vector2(0.39948744, 0.43155414)
 texture = ExtResource("5_ggal5")

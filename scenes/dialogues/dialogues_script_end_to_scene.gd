@@ -9,12 +9,12 @@ var textIndex = 0
 func _ready() -> void:
 	label.text = parts[textIndex]
 
-func goToScene(scene: String) -> void:
-	get_tree().change_scene_to_file(scene)
-
 func _on_button_pressed() -> void:
 	textIndex = (textIndex + 1) 
 	if textIndex == parts.size():
-		goToScene(scene)
+		get_tree().change_scene_to_file(scene)
 	else:
+		if textIndex >= parts.size(): # avoid error in the log
+			textIndex = parts.size() - 1
+			
 		label.text = parts[textIndex]

@@ -1,5 +1,3 @@
-# Positionne le bouton en haut à droite avec les ancres
-# Layout → Top Right
 extends Button
 
 func _ready():

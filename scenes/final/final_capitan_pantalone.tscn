@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bx0vi5tdm1eqx"]
 
 [ext_resource type="Texture2D" uid="uid://cx1nt7swbnufk" path="res://assets/capitan_unmaksed.png" id="1_tlw6x"]
+[ext_resource type="FontFile" uid="uid://dlm5fr77oy138" path="res://assets/fonts/Ancient Medium.ttf" id="2_583w7"]
 
 [node name="IntroductionCapitan" type="Node2D" unique_id=851590345]
 
@@ -21,8 +22,10 @@ offset_top = 168.0
 offset_right = 1120.0
 offset_bottom = 871.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_583w7")
 theme_override_font_sizes/font_size = 43
 text = "Ma poupée ? Qu’est-ce que…? Eumh, je veux dire… Ca doit appartenir à mon imbécile de Brighella, qui laisse traîner ses jeux puérils n'importe où. Mais soyons magnanimes, ne le mettons pas mal à l’aise et gardons ça secret.
+
 
 La Capitaine est démasqué ! Il est rouge de honte ! Jamais Pantalone ne voudra marier sa fille à un militaire qui joue en secret à la poupée le soir ! Colombine est sauvée !
 

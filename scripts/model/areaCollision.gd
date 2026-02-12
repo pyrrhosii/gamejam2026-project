@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var nextScene = preload("res://scenes/final/final_capitan_arlequina.tscn")
+
 var correctSequence := ["Sultanat", "Chinapon", "Ottoman","Capistan","Dindia","Europea"]
 var currentStep := 0    # Combien de clics corrects
 
@@ -45,6 +47,7 @@ func verifySequence(country) -> void:
 		
 	if currentStep == correctSequence.size():
 		$CanvasLayer/PanelSuccess.show()
+		%CloseButton.hide()
 		currentStep = 0
 		await get_tree().create_timer(6.0).timeout
-		get_tree().change_scene_to_file("res://scenes/final/final_capitan_arlequina.tscn")
+		get_tree().change_scene_to_packed(nextScene)

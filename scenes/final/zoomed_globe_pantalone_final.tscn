@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://blqkvesuwj31c" path="res://scripts/model/areaCollision.gd" id="1_pvi2f"]
 [ext_resource type="Texture2D" uid="uid://fu6qp8884wc" path="res://assets/pays.jpg" id="2_qbm3l"]
-[ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="4_hogey"]
+[ext_resource type="FontFile" uid="uid://dlm5fr77oy138" path="res://assets/fonts/Ancient Medium.ttf" id="3_t2bi2"]
 [ext_resource type="Script" uid="uid://cgh5j74gv16oq" path="res://scripts/UI/close_window.gd" id="5_sooge"]
 [ext_resource type="Texture2D" uid="uid://dy4ag1nsrito3" path="res://assets/puppet.png" id="6_qbm3l"]
 
@@ -13,14 +13,14 @@ border_width_right = 2
 border_width_bottom = 2
 
 [sub_resource type="LabelSettings" id="LabelSettings_j1py2"]
-font = ExtResource("4_hogey")
+font = ExtResource("3_t2bi2")
 font_size = 33
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5whae"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qbm3l"]
-font = ExtResource("4_hogey")
+font = ExtResource("3_t2bi2")
 font_size = 31
 font_color = Color(0, 0, 0, 1)
 
@@ -32,7 +32,7 @@ border_width_bottom = 2
 border_color = Color(1, 1, 1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_i8h24"]
-font = ExtResource("4_hogey")
+font = ExtResource("3_t2bi2")
 font_size = 33
 font_color = Color(0, 0, 0, 1)
 
@@ -82,6 +82,7 @@ offset_left = 18.164581
 offset_top = 5.012024
 offset_right = -15.835388
 offset_bottom = -17.987915
+theme_override_fonts/font = ExtResource("3_t2bi2")
 text = "*clic*"
 label_settings = SubResource("LabelSettings_j1py2")
 horizontal_alignment = 1
@@ -91,7 +92,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=896543145]
 
-[node name="Button" type="Button" parent="CanvasLayer" unique_id=1147268179]
+[node name="CloseButton" type="Button" parent="CanvasLayer" unique_id=1147268179]
+unique_name_in_owner = true
 anchors_preset = -1
 anchor_left = 0.79300004
 anchor_top = 0.063
@@ -125,6 +127,7 @@ offset_left = 37.0
 offset_top = 12.0
 offset_right = 7.4989624
 offset_bottom = -3.9620056
+theme_override_fonts/font = ExtResource("3_t2bi2")
 text = "Le globe s'ouvre !
 Une ridicule poupée !
 Le Capitaine en prend pour son panache"
@@ -161,6 +164,7 @@ offset_left = 19.0
 offset_top = 9.0
 offset_right = 96.0
 offset_bottom = 47.0
+theme_override_fonts/font = ExtResource("3_t2bi2")
 text = "*clic*"
 label_settings = SubResource("LabelSettings_i8h24")
 horizontal_alignment = 1
@@ -197,6 +201,7 @@ offset_left = 16.0
 offset_top = 7.0
 offset_right = 175.0
 offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("3_t2bi2")
 text = "*clic*"
 label_settings = SubResource("LabelSettings_i8h24")
 horizontal_alignment = 1
@@ -233,6 +238,7 @@ offset_left = 10.0
 offset_top = 7.0
 offset_right = 169.0
 offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("3_t2bi2")
 text = "*clic*"
 label_settings = SubResource("LabelSettings_i8h24")
 horizontal_alignment = 1
@@ -267,6 +273,7 @@ offset_left = 10.0
 offset_top = 7.0
 offset_right = 169.0
 offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("3_t2bi2")
 text = "*clic*"
 label_settings = SubResource("LabelSettings_i8h24")
 horizontal_alignment = 1
@@ -302,6 +309,7 @@ offset_left = 10.0
 offset_top = 7.0
 offset_right = 169.0
 offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("3_t2bi2")
 text = "*clic*"
 label_settings = SubResource("LabelSettings_i8h24")
 horizontal_alignment = 1

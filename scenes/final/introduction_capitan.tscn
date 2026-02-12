@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dkp8njfgh0wvk"]
 
 [ext_resource type="Texture2D" uid="uid://lfuk6lermcm3" path="res://assets/capitan.png" id="1_ltws8"]
-[ext_resource type="PackedScene" uid="uid://c8qiwd1gpn6ct" path="res://scenes/dialogues/dialogues_dynamiques_end_to_scene.tscn" id="2_ql147"]
+[ext_resource type="PackedScene" uid="uid://cqhdwt2fywoi6" path="res://scenes/dialogues/dialogues_dynamiques_end_to_scene.tscn" id="2_ql147"]
 
 [node name="IntroductionCapitan" type="Node2D" unique_id=851590345]
 

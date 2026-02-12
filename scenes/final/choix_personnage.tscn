@@ -1,63 +1,65 @@
 [gd_scene format=3 uid="uid://cgap1sn8aje4i"]
 
 [ext_resource type="Script" uid="uid://bmkyc2dh5y8yi" path="res://scripts/final/choix_personnage.gd" id="1_0mnt2"]
-[ext_resource type="FontFile" uid="uid://ba5qbl2c8qek2" path="res://fonts/Ancient Medium.ttf" id="1_b6uek"]
 [ext_resource type="Texture2D" uid="uid://cah0roqjfst01" path="res://assets/start_menu_free.png" id="2_smpio"]
 [ext_resource type="Texture2D" uid="uid://blgnl2bpu40la" path="res://assets/masque.png" id="3_10t5j"]
 [ext_resource type="Texture2D" uid="uid://dumbb0wybc51d" path="res://assets/masque_arlequina.png" id="5_msfd3"]
 [ext_resource type="PackedScene" uid="uid://cqhdwt2fywoi6" path="res://scenes/dialogues/dialogues_dynamiques_end_to_scene.tscn" id="6_uyy40"]
+[ext_resource type="FontFile" uid="uid://dlm5fr77oy138" path="res://assets/fonts/Ancient Medium.ttf" id="7_i66uu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_smpio"]
-font = ExtResource("1_b6uek")
+font = ExtResource("7_i66uu")
 font_size = 55
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_msfd3"]
-font = ExtResource("1_b6uek")
+font = ExtResource("7_i66uu")
 font_size = 55
 font_color = Color(0, 0, 0, 1)
 
 [node name="ChoixPersonnage" type="Node2D" unique_id=1266763283]
 script = ExtResource("1_0mnt2")
 
-[node name="StartMenuFree" type="Sprite2D" parent="." unique_id=1129958847]
+[node name="Background" type="Sprite2D" parent="." unique_id=1129958847]
 position = Vector2(1217, 783)
 texture = ExtResource("2_smpio")
 
-[node name="Label" type="Label" parent="." unique_id=1405557383]
+[node name="PantaloneLabel" type="Label" parent="." unique_id=1405557383]
 offset_left = 312.0
 offset_top = 857.0
 offset_right = 650.0
 offset_bottom = 993.0
+theme_override_fonts/font = ExtResource("7_i66uu")
 text = "Je suis Pantalone"
 label_settings = SubResource("LabelSettings_smpio")
 
-[node name="Label2" type="Label" parent="." unique_id=358992622]
+[node name="ArlequinaLabel" type="Label" parent="." unique_id=358992622]
 offset_left = 1303.0
 offset_top = 864.0
 offset_right = 1656.0
 offset_bottom = 926.0
+theme_override_fonts/font = ExtResource("7_i66uu")
 text = "Je suis Arlequina"
 label_settings = SubResource("LabelSettings_msfd3")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1742181998]
+[node name="PantaloneMask" type="Area2D" parent="." unique_id=1742181998]
 position = Vector2(-196, 44)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=893541585]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PantaloneMask" unique_id=893541585]
 polygon = PackedVector2Array(516, 415, 662, 370, 786, 390, 836, 533, 855, 677, 792, 760, 496, 771, 466, 544)
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=784489839]
+[node name="Sprite2D" type="Sprite2D" parent="PantaloneMask" unique_id=784489839]
 position = Vector2(659, 557)
 scale = Vector2(0.6873112, 0.6873112)
 texture = ExtResource("3_10t5j")
 
-[node name="Area2D2" type="Area2D" parent="." unique_id=1703541830]
+[node name="ArlequinaMask" type="Area2D" parent="." unique_id=1703541830]
 position = Vector2(50, 122)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D2" unique_id=1160769036]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ArlequinaMask" unique_id=1160769036]
 polygon = PackedVector2Array(1256, 621, 1206, 430, 1314, 292, 1554, 317, 1609, 428, 1601, 665, 1443, 712, 1286, 693)
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D2" unique_id=28305728]
+[node name="Sprite2D" type="Sprite2D" parent="ArlequinaMask" unique_id=28305728]
 position = Vector2(1427, 511.99997)
 scale = Vector2(0.45863965, 0.45863962)
 texture = ExtResource("5_msfd3")
@@ -80,18 +82,18 @@ offset_bottom = 359.0
 parts = Array[String](["Catastrophe ! Ma douce Colombine va se marier ! Elle n’a d’amour que pour moi, et je n’ai d’amour que pour elle. Jusqu’ici nous avons toujours réussi à éviter les unions que ce vieillard aigri de Pantalone voulaient lui imposer. Nous n’aspirons qu’à une chose désormais : fuir Venise et jouir des plaisirs que la vie nous offre. Les fruits dans le verger, la source pure de la montagne, le feu qui crépite dans la cabane de torchis, seront de nature à protéger notre amour. Mais le temps presse…", "Je dois absolument empêcher ce mariage ! Si je pouvais le ridiculiser au yeux de mon maître avant que l’accord ne soit passé…! Je vais profiter de la visite que Pantalone doit rendre au Capitaine Rodomonte pour l’accompagner. Je trouverai bien un moyen de le convaincre d’ aller fouiner en douce dans le bureau du militaire… Marier la prunelle de ses yeux mérite bien de s’assurer que le parti qu’il lui réserve est fiable et prestigieux."])
 scene = "res://scenes/final/cabinet_arlequina_final.tscn"
 
-[node name="Label3" type="Label" parent="." unique_id=1798571968]
+[node name="Intro" type="Label" parent="." unique_id=1798571968]
 offset_left = 471.0
 offset_top = 43.0
 offset_right = 1559.0
 offset_bottom = 359.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_b6uek")
+theme_override_fonts/font = ExtResource("7_i66uu")
 theme_override_font_sizes/font_size = 48
 text = "Cliquez sur le personnage de votre choix pour commencer. Attention, votre partenaire doit cliquer sur le second !"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
-[connection signal="input_event" from="Area2D2" to="." method="_on_area_2d_2_input_event"]
+[connection signal="input_event" from="PantaloneMask" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="ArlequinaMask" to="." method="_on_area_2d_2_input_event"]
